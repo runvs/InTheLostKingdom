@@ -40,28 +40,34 @@ public class PlayerMovementController : MonoBehaviour {
         // no rotation
         this.transform.rotation = Quaternion.Euler(0, 0, 0);
 
-        
-        if(this.GetComponent<Rigidbody2D>().velocity.x >= GameProperties.PlayerMaxVelocity)
+        if (this.GetComponent<Rigidbody2D>().velocity.SqrMagnitude() >= GameProperties.PlayerMaxVelocity * GameProperties.PlayerMaxVelocity)
         {
-            this.GetComponent<Rigidbody2D>().velocity = new Vector2(GameProperties.PlayerMaxVelocity, 0);
-            //Debug.Log("Capping");
-        }
-        else if (this.GetComponent<Rigidbody2D>().velocity.x <= -GameProperties.PlayerMaxVelocity)
-        {
-            this.GetComponent<Rigidbody2D>().velocity = new Vector2(-GameProperties.PlayerMaxVelocity, 0);
-            //Debug.Log("Capping");
+            this.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity.normalized * GameProperties.PlayerMaxVelocity;
         }
 
-        if (this.GetComponent<Rigidbody2D>().velocity.y >= GameProperties.PlayerMaxVelocity)
-        {
-            this.GetComponent<Rigidbody2D>().velocity = new Vector2(0, GameProperties.PlayerMaxVelocity);
-            //Debug.Log("Capping");
-        }
-        else if (this.GetComponent<Rigidbody2D>().velocity.y <= -GameProperties.PlayerMaxVelocity)
-        {
-            this.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -GameProperties.PlayerMaxVelocity);
-            //Debug.Log("Capping");
-        }
+
+
+        //if(this.GetComponent<Rigidbody2D>().velocity.x >= GameProperties.PlayerMaxVelocity)
+        //{
+        //    this.GetComponent<Rigidbody2D>().velocity = new Vector2(GameProperties.PlayerMaxVelocity, 0);
+        //    //Debug.Log("Capping");
+        //}
+        //else if (this.GetComponent<Rigidbody2D>().velocity.x <= -GameProperties.PlayerMaxVelocity)
+        //{
+        //    this.GetComponent<Rigidbody2D>().velocity = new Vector2(-GameProperties.PlayerMaxVelocity, 0);
+        //    //Debug.Log("Capping");
+        //}
+
+        //if (this.GetComponent<Rigidbody2D>().velocity.y >= GameProperties.PlayerMaxVelocity)
+        //{
+        //    this.GetComponent<Rigidbody2D>().velocity = new Vector2(0, GameProperties.PlayerMaxVelocity);
+        //    //Debug.Log("Capping");
+        //}
+        //else if (this.GetComponent<Rigidbody2D>().velocity.y <= -GameProperties.PlayerMaxVelocity)
+        //{
+        //    this.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -GameProperties.PlayerMaxVelocity);
+        //    //Debug.Log("Capping");
+        //}
         Debug.Log(this.GetComponent<Rigidbody2D>().velocity);
     }
 
