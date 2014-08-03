@@ -2074,6 +2074,7 @@ GameObject:
   - 4: {fileID: 248647084}
   - 212: {fileID: 248647083}
   - 114: {fileID: 248647082}
+  - 61: {fileID: 248647085}
   m_Layer: 0
   m_Name: tile_rock
   m_TagString: Tiles_Foreground
@@ -2129,6 +2130,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 629827757}
   m_RootOrder: 23
+--- !u!61 &248647085
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100000, guid: deedb12e595d3c142b2f43b0b806d29b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1676330565}
+  m_GameObject: {fileID: 248647081}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &249380096
 GameObject:
   m_ObjectHideFlags: 0
@@ -9816,6 +9829,7 @@ GameObject:
   - 4: {fileID: 1322700927}
   - 212: {fileID: 1322700926}
   - 114: {fileID: 1322700925}
+  - 61: {fileID: 1322700928}
   m_Layer: 0
   m_Name: tile_rock
   m_TagString: Tiles_Foreground
@@ -9871,6 +9885,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 629827757}
   m_RootOrder: 22
+--- !u!61 &1322700928
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100000, guid: deedb12e595d3c142b2f43b0b806d29b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2076347067}
+  m_GameObject: {fileID: 1322700924}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!1001 &1323508228
 Prefab:
   m_ObjectHideFlags: 0
