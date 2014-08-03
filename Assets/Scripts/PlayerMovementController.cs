@@ -19,7 +19,26 @@ public class PlayerMovementController : MonoBehaviour {
         {
             MoveLeft();
         }
+
+        if (Input.GetAxis("Vertical") > 0)
+        {
+            MoveDown();
+        }
+        else if (Input.GetAxis("Vertical") < 0)
+        {
+            MoveUp();
+        }
 	}
+
+    private void MoveUp()
+    {
+        this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y - 0.25f);
+    }
+
+    private void MoveDown()
+    {
+        this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.25f);
+    }
 
     private void MoveRight()
     {
