@@ -245,6 +245,7 @@ GameObject:
   - 4: {fileID: 243635596}
   - 212: {fileID: 243635595}
   - 114: {fileID: 243635594}
+  - 61: {fileID: 243635597}
   m_Layer: 0
   m_Name: tile_water
   m_TagString: Tiles_Background
@@ -300,6 +301,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 629827757}
   m_RootOrder: 25
+--- !u!61 &243635597
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100000, guid: c80aec3c4479e1843bc87bfc6410eb84,
+    type: 2}
+  m_PrefabInternal: {fileID: 491770496}
+  m_GameObject: {fileID: 243635593}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &249380096
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,6 +624,7 @@ GameObject:
   - 4: {fileID: 485487615}
   - 212: {fileID: 485487614}
   - 114: {fileID: 485487613}
+  - 61: {fileID: 485487616}
   m_Layer: 0
   m_Name: tile_water
   m_TagString: Tiles_Background
@@ -666,6 +680,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 629827757}
   m_RootOrder: 24
+--- !u!61 &485487616
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100000, guid: c80aec3c4479e1843bc87bfc6410eb84,
+    type: 2}
+  m_PrefabInternal: {fileID: 1556552954}
+  m_GameObject: {fileID: 485487612}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!1001 &491770496
 Prefab:
   m_ObjectHideFlags: 0
@@ -1035,6 +1061,8 @@ GameObject:
   - 212: {fileID: 667921368}
   - 114: {fileID: 667921367}
   - 114: {fileID: 667921366}
+  - 50: {fileID: 667921370}
+  - 61: {fileID: 667921371}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -1061,7 +1089,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2048466875}
   m_GameObject: {fileID: 667921365}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97d2d5a3331ae8240b494cf5aef31c37, type: 3}
   m_Name: 
@@ -1096,11 +1124,38 @@ Transform:
   m_PrefabInternal: {fileID: 2048466875}
   m_GameObject: {fileID: 667921365}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.680656433, y: -1.02695608, z: 0}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &667921370
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000000, guid: 144d70a18befc24459a5604c313db6ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 2048466875}
+  m_GameObject: {fileID: 667921365}
+  m_Mass: 1
+  m_LinearDrag: 100
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!61 &667921371
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667921365}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!1001 &716833646
 Prefab:
   m_ObjectHideFlags: 0
@@ -3120,6 +3175,7 @@ GameObject:
   - 4: {fileID: 2016087130}
   - 212: {fileID: 2016087129}
   - 114: {fileID: 2016087128}
+  - 61: {fileID: 2016087131}
   m_Layer: 0
   m_Name: tile_water
   m_TagString: Tiles_Background
@@ -3175,6 +3231,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 629827757}
   m_RootOrder: 26
+--- !u!61 &2016087131
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100000, guid: c80aec3c4479e1843bc87bfc6410eb84,
+    type: 2}
+  m_PrefabInternal: {fileID: 300738197}
+  m_GameObject: {fileID: 2016087127}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!1001 &2046985780
 Prefab:
   m_ObjectHideFlags: 0
@@ -3232,11 +3300,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 144d70a18befc24459a5604c313db6ad, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.680656433
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 144d70a18befc24459a5604c313db6ad, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.02695608
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 144d70a18befc24459a5604c313db6ad, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3261,6 +3329,18 @@ Prefab:
     - target: {fileID: 400000, guid: 144d70a18befc24459a5604c313db6ad, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: 144d70a18befc24459a5604c313db6ad, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 144d70a18befc24459a5604c313db6ad, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: 144d70a18befc24459a5604c313db6ad, type: 2}
+      propertyPath: m_LinearDrag
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 144d70a18befc24459a5604c313db6ad, type: 2}

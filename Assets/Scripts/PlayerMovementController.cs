@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayerMovementController : MonoBehaviour {
     
+
+
 	// Use this for initialization
 	void Start () {
 	
@@ -32,21 +34,21 @@ public class PlayerMovementController : MonoBehaviour {
 
     private void MoveUp()
     {
-        this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y - 0.25f);
+        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -GameProperties.PlayerMoveForce));
     }
 
     private void MoveDown()
     {
-        this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.25f);
+        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, GameProperties.PlayerMoveForce));
     }
 
     private void MoveRight()
     {
-        this.transform.position = new Vector3(this.transform.position.x + 0.25f, this.transform.position.y);
+        this.GetComponent<Rigidbody2D>().AddForce(new Vector2( GameProperties.PlayerMoveForce, 0));
     }
 
     private void MoveLeft()
     {
-        this.transform.position = new Vector3(this.transform.position.x - 0.25f, this.transform.position.y);
+        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(-GameProperties.PlayerMoveForce, 0));
     }
 }
