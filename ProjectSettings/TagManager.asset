@@ -48,47 +48,15 @@ TagManager:
     userID: 0
     uniqueID: 0
     locked: 0
-  - name: New Layer 1
-    userID: 1
-    uniqueID: 831227395
-    locked: 0
-  - name: New Layer 2
-    userID: 2
-    uniqueID: 2237200107
-    locked: 0
-  - name: New Layer 3
-    userID: 3
-    uniqueID: 571398451
-    locked: 0
   - name: Background
     userID: 4
     uniqueID: 1260320145
     locked: 0
-  - name: New Layer 5
-    userID: 5
-    uniqueID: 2760272305
-    locked: 0
-  - name: New Layer 6
+  - name: Foreground
     userID: 6
     uniqueID: 2666744139
     locked: 0
-  - name: New Layer 7
-    userID: 7
-    uniqueID: 2923700463
-    locked: 0
-  - name: New Layer 8
-    userID: 8
-    uniqueID: 1989182265
-    locked: 0
-  - name: New Layer 9
-    userID: 9
-    uniqueID: 2386678801
-    locked: 0
-  - name: New Layer 10
-    userID: 10
-    uniqueID: 40603061
-    locked: 0
-  - name: New Layer 11
+  - name: Entities
     userID: 11
     uniqueID: 92272069
     locked: 0
@@ -96,29 +64,9 @@ TagManager:
     userID: 12
     uniqueID: 3054933167
     locked: 0
-  - name: New Layer 13
-    userID: 13
-    uniqueID: 3810462243
-    locked: 0
-  - name: New Layer 14
-    userID: 14
-    uniqueID: 2830697991
-    locked: 0
-  - name: New Layer 15
-    userID: 15
-    uniqueID: 3937151673
-    locked: 0
   - name: Overlay
     userID: 16
     uniqueID: 1522123735
-    locked: 0
-  - name: New Layer 17
-    userID: 17
-    uniqueID: 1814284267
-    locked: 0
-  - name: New Layer 18
-    userID: 18
-    uniqueID: 305226375
     locked: 0
   - name: Hud
     userID: 19
