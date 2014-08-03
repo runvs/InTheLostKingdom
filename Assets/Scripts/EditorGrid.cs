@@ -19,5 +19,7 @@ public class EditorGrid : MonoBehaviour {
         y = Mathf.Round(transform.position.y / cell_size) * cell_size;
         z = transform.position.z;
         transform.position = new Vector3(x, y, z);
+
+        transform.localScale = new Vector3(1.0f, 1.0f);
 	}
 }

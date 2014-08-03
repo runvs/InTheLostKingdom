@@ -3,6 +3,13 @@
 --- !u!78 &1
 TagManager:
   tags:
+  - Tiles_Background
+  - Tiles_Foreground
+  - Entities
+  - Player
+  - Overlays
+  - Hud
+  - TileGroup
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
