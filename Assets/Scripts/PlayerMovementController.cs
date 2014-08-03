@@ -1,19 +1,25 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class PlayerMovementController : MonoBehaviour {
-    
+public enum Direction
+{
+    NORTH, EAST, SOUTH, WEST
+}
 
+public class PlayerMovementController : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () 
+    public Direction PlayerDirection;
+
+    // Use this for initialization
+    void Start()
     {
-        if(Input.GetAxis("Horizontal") > 0)
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetAxis("Horizontal") > 0)
         {
             MoveRight();
         }
@@ -32,8 +38,8 @@ public class PlayerMovementController : MonoBehaviour {
         }
 
         CapVelocity();
-        
-	}
+
+    }
 
     private void CapVelocity()
     {
@@ -45,49 +51,30 @@ public class PlayerMovementController : MonoBehaviour {
             this.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity.normalized * GameProperties.PlayerMaxVelocity;
         }
 
-
-
-        //if(this.GetComponent<Rigidbody2D>().velocity.x >= GameProperties.PlayerMaxVelocity)
-        //{
-        //    this.GetComponent<Rigidbody2D>().velocity = new Vector2(GameProperties.PlayerMaxVelocity, 0);
-        //    //Debug.Log("Capping");
-        //}
-        //else if (this.GetComponent<Rigidbody2D>().velocity.x <= -GameProperties.PlayerMaxVelocity)
-        //{
-        //    this.GetComponent<Rigidbody2D>().velocity = new Vector2(-GameProperties.PlayerMaxVelocity, 0);
-        //    //Debug.Log("Capping");
-        //}
-
-        //if (this.GetComponent<Rigidbody2D>().velocity.y >= GameProperties.PlayerMaxVelocity)
-        //{
-        //    this.GetComponent<Rigidbody2D>().velocity = new Vector2(0, GameProperties.PlayerMaxVelocity);
-        //    //Debug.Log("Capping");
-        //}
-        //else if (this.GetComponent<Rigidbody2D>().velocity.y <= -GameProperties.PlayerMaxVelocity)
-        //{
-        //    this.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -GameProperties.PlayerMaxVelocity);
-        //    //Debug.Log("Capping");
-        //}
         Debug.Log(this.GetComponent<Rigidbody2D>().velocity);
     }
 
     private void MoveUp()
     {
         this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -GameProperties.PlayerMoveForce));
+        this.PlayerDirection = Direction.NORTH;
     }
 
     private void MoveDown()
     {
         this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, GameProperties.PlayerMoveForce));
+        this.PlayerDirection = Direction.SOUTH;
     }
 
     private void MoveRight()
     {
-        this.GetComponent<Rigidbody2D>().AddForce(new Vector2( GameProperties.PlayerMoveForce, 0));
+        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(GameProperties.PlayerMoveForce, 0));
+        this.PlayerDirection = Direction.EAST;
     }
 
     private void MoveLeft()
     {
         this.GetComponent<Rigidbody2D>().AddForce(new Vector2(-GameProperties.PlayerMoveForce, 0));
+        this.PlayerDirection = Direction.WEST;
     }
 }
