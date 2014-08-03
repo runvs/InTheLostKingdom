@@ -8,6 +8,8 @@ public enum Direction
 public class PlayerMovementController : MonoBehaviour
 {
 
+    public Direction PlayerDirection;
+
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
