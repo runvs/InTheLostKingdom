@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerMovementController : MonoBehaviour {
-    
+public class PlayerMovementController : MonoBehaviour 
+{
 
+
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
 	// Use this for initialization
 	void Start () {
@@ -32,7 +37,7 @@ public class PlayerMovementController : MonoBehaviour {
         }
 
         CapVelocity();
-        
+
 	}
 
     private void CapVelocity()
@@ -68,7 +73,7 @@ public class PlayerMovementController : MonoBehaviour {
         //    this.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -GameProperties.PlayerMaxVelocity);
         //    //Debug.Log("Capping");
         //}
-        Debug.Log(this.GetComponent<Rigidbody2D>().velocity);
+        //Debug.Log(this.GetComponent<Rigidbody2D>().velocity);
     }
 
     private void MoveUp()
