@@ -8,7 +8,10 @@ public enum Direction
 public class PlayerMovementController : MonoBehaviour
 {
 
-    public Direction PlayerDirection;
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     // Use this for initialization
     void Start()
@@ -51,7 +54,7 @@ public class PlayerMovementController : MonoBehaviour
             this.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity.normalized * GameProperties.PlayerMaxVelocity;
         }
 
-        Debug.Log(this.GetComponent<Rigidbody2D>().velocity);
+        //Debug.Log(this.GetComponent<Rigidbody2D>().velocity);
     }
 
     private void MoveUp()
