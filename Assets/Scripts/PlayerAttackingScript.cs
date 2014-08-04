@@ -23,16 +23,16 @@ public class PlayerAttackingScript : MonoBehaviour
                 switch (playerDirection)
                 {
                     case Direction.NORTH:
-                        enemy.transform.position = enemy.transform.position + new Vector3(0, -1);
+                        enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -GameProperties.EnemyKnockbackForce));
                         break;
                     case Direction.EAST:
-                        enemy.transform.position = enemy.transform.position + new Vector3(1, 0);
+                        enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(GameProperties.EnemyKnockbackForce, 0));
                         break;
                     case Direction.SOUTH:
-                        enemy.transform.position = enemy.transform.position + new Vector3(0, 1);
+                        enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, GameProperties.EnemyKnockbackForce));
                         break;
                     case Direction.WEST:
-                        enemy.transform.position = enemy.transform.position + new Vector3(-1, 0);
+                        enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(-GameProperties.EnemyKnockbackForce, 0));
                         break;
                 }
 
