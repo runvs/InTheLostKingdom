@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerAttackingScript : MonoBehaviour
 {
     List<GameObject> _enemies;
+    float _inputTimer = 0.0f;
 
     // Use this for initialization
     void Start()
@@ -16,28 +17,42 @@ public class PlayerAttackingScript : MonoBehaviour
     {
         if (Input.GetButton("Fire1"))
         {
-            var playerDirection = this.transform.parent.GetComponent<PlayerMovementController>().PlayerDirection;
-
-            foreach (var enemy in _enemies)
+            if (_inputTimer <= 0.0f)
             {
-                switch (playerDirection)
-                {
-                    case Direction.NORTH:
-                        enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -GameProperties.EnemyKnockbackForce));
-                        break;
-                    case Direction.EAST:
-                        enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(GameProperties.EnemyKnockbackForce, 0));
-                        break;
-                    case Direction.SOUTH:
-                        enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, GameProperties.EnemyKnockbackForce));
-                        break;
-                    case Direction.WEST:
-                        enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(-GameProperties.EnemyKnockbackForce, 0));
-                        break;
-                }
+                _inputTimer += GameProperties.BaseInputTimer;
+                var playerDirection = this.transform.parent.GetComponent<PlayerMovementController>().PlayerDirection;
 
-                Debug.Log("Hit enemy!");
+                foreach (var enemy in _enemies)
+                {
+                    if (enemy == null)
+                        continue;
+
+                    switch (playerDirection)
+                    {
+                        case Direction.NORTH:
+                            enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -GameProperties.EnemyKnockbackForce));
+                            break;
+                        case Direction.EAST:
+                            enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(GameProperties.EnemyKnockbackForce, 0));
+                            break;
+                        case Direction.SOUTH:
+                            enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, GameProperties.EnemyKnockbackForce));
+                            break;
+                        case Direction.WEST:
+                            enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(-GameProperties.EnemyKnockbackForce, 0));
+                            break;
+                    }
+
+                    enemy.GetComponent<HealthController>().Health -= GameProperties.PlayerBaseDamage;
+                    Debug.Log("Hit enemy!");
+                }
             }
+        }
+
+
+        if (_inputTimer > 0)
+        {
+            _inputTimer -= Time.deltaTime;
         }
     }
 

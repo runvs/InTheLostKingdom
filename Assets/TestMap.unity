@@ -9768,6 +9768,7 @@ GameObject:
   - 114: {fileID: 1279460288}
   - 50: {fileID: 1279460287}
   - 61: {fileID: 1279460286}
+  - 114: {fileID: 1279460285}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -9788,6 +9789,19 @@ Transform:
   - {fileID: 1471742175}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &1279460285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400008, guid: 961d1cb1d13dc8343a3e454fdb14b276,
+    type: 2}
+  m_PrefabInternal: {fileID: 755097234}
+  m_GameObject: {fileID: 1279460283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073a721f623e8dc48a0e307d03f837f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 0
 --- !u!61 &1279460286
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15252,6 +15266,7 @@ GameObject:
   - 212: {fileID: 1863692785}
   - 61: {fileID: 1863692784}
   - 50: {fileID: 1863692787}
+  - 114: {fileID: 1863692788}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Enemies
@@ -15322,6 +15337,19 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &1863692788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 253278a5686b752419d8fb47b5472f87,
+    type: 2}
+  m_PrefabInternal: {fileID: 225998906}
+  m_GameObject: {fileID: 1863692783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073a721f623e8dc48a0e307d03f837f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 0
 --- !u!1001 &1870720448
 Prefab:
   m_ObjectHideFlags: 0
