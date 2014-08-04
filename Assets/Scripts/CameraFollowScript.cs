@@ -8,6 +8,7 @@ public class CameraFollowScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
+        DontDestroyOnLoad(gameObject);
         Player = GameObject.FindGameObjectWithTag("Player");
         if(Player == null)
         {
