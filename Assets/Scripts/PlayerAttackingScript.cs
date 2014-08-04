@@ -16,8 +16,26 @@ public class PlayerAttackingScript : MonoBehaviour
     {
         if (Input.GetButton("Fire1"))
         {
-            if (_enemies.Count > 0)
+            var playerDirection = this.transform.parent.GetComponent<PlayerMovementController>().PlayerDirection;
+
+            foreach (var enemy in _enemies)
             {
+                switch (playerDirection)
+                {
+                    case Direction.NORTH:
+                        enemy.transform.position = enemy.transform.position + new Vector3(0, -1);
+                        break;
+                    case Direction.EAST:
+                        enemy.transform.position = enemy.transform.position + new Vector3(1, 0);
+                        break;
+                    case Direction.SOUTH:
+                        enemy.transform.position = enemy.transform.position + new Vector3(0, 1);
+                        break;
+                    case Direction.WEST:
+                        enemy.transform.position = enemy.transform.position + new Vector3(-1, 0);
+                        break;
+                }
+
                 Debug.Log("Hit enemy!");
             }
         }
