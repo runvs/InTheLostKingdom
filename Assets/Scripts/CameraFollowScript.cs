@@ -1,0 +1,24 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class CameraFollowScript : MonoBehaviour {
+
+    GameObject Player;
+
+	// Use this for initialization
+	void Start () 
+    {
+        Player = GameObject.FindGameObjectWithTag("Player");
+        if(Player == null)
+        {
+            throw new UnityException("Player could not be found.");
+        }
+	}
+	
+	// Update is called once per frame
+	void Update () 
+    {
+        this.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, -10);
+
+	}
+}
