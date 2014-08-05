@@ -21,8 +21,8 @@ public class MenuScript : MonoBehaviour {
         _fadeTime = _fadeTimeTotal;
         _introMoveTime = _introMoveTimeTotal;
         _introFadeTime = _introFadeTimeTotal;
-        //GameObject.FindGameObjectWithTag("MessageText").GetComponent<GUIText>().text = "Space Invaders\n\n A Game by Simon Weis @Laguna_999 \n\n Press Space to start!";
-        //GameObject.FindGameObjectWithTag("MessageText").GetComponent<GUIText>().color = new Color(1.0f, 1.0f, 1.0f, 0);
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().text = "In the lost Kingdom\n\nA Game by Julian Dinges @Thunraz \nAnd Simon Weis @Laguna_999 \n\n Press Space to start!";
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().color = new Color(1.0f, 1.0f, 1.0f, 0);
     }
 
     // Update is called once per frame
@@ -60,7 +60,7 @@ public class MenuScript : MonoBehaviour {
 
                 _introFadeTime -= Time.deltaTime;
                 float alphaval = ((float)(PennerDoubleEquation.GetValue(PennerDoubleEquation.EquationType.Linear, -_introFadeTime, 0.0f, 1.0f, _introFadeTimeTotal)));
-                //GameObject.FindGameObjectWithTag("MessageText").GetComponent<GUIText>().color = new Color(1.0f, 1.0f, 1.0f, alphaval);
+                GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().color = new Color(0.682f, 0.768f, 0.25f, alphaval);
             }
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -70,16 +70,20 @@ public class MenuScript : MonoBehaviour {
             if (_fading)
             {
                 _fadeTime -= Time.deltaTime;
-                Color col = new Color(1.0f, 1.0f, 1.0f, _fadeTime / _fadeTimeTotal);
+
+                Color b = new Color(0.682f, 0.768f, 0.25f, 1.0f);
+                Color a = new Color(0.1255f, 0.2745f, 0.1922f, 1.0f);
+
+                Color col = Color.Lerp(a, b, _fadeTime / _fadeTimeTotal);
                 if (_fadeTime <= 0)
                 {
                     col = new Color(1.0f, 1.0f, 1.0f, 0);
-                    //GameObject.FindGameObjectWithTag("MessageText").GetComponent<GUIText>().color = col;
+                    GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().color = col;
                     Instantiate(PlayerTemplate, new Vector3(-3, 1, 0), new Quaternion());
                     Application.LoadLevel("TestMap");
 
                 }
-                //GameObject.FindGameObjectWithTag("MessageText").GetComponent<GUIText>().color = col;
+                GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().color = col;
 
             }
         }
