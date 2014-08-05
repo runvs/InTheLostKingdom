@@ -7,7 +7,8 @@ public class PixelGridScript : MonoBehaviour {
     private float x, y, z;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+    {
 	
 	}
 	
