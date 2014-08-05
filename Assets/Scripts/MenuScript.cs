@@ -21,7 +21,7 @@ public class MenuScript : MonoBehaviour {
         _fadeTime = _fadeTimeTotal;
         _introMoveTime = _introMoveTimeTotal;
         _introFadeTime = _introFadeTimeTotal;
-        GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().text = "In the lost Kingdom\n\nA Game by Julian Dinges @Thunraz \nAnd Simon Weis @Laguna_999 \n\n Press Space to start!";
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().text = "In the lost Kingdom\n\nA Game by Julian Dinges @Thunraz \nAnd Simon Weis @Laguna_999 \n\nPress Space to start!";
         GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().color = new Color(1.0f, 1.0f, 1.0f, 0);
     }
 
