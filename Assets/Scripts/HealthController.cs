@@ -4,7 +4,6 @@ public class HealthController : MonoBehaviour
 {
     public float Health;
 
-    // Use this for initialization
     void Start()
     {
         switch (this.tag)
@@ -18,10 +17,9 @@ public class HealthController : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Health <= 0.0f)
+        if (Health <= 0.0f && this.tag != "Player")
         {
             Destroy(this.gameObject);
         }

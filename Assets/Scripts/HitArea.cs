@@ -1,19 +1,12 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class PlayerHitArea : MonoBehaviour {
+public class HitArea : MonoBehaviour
+{
+    void Update()
+    {
+        var direction = this.transform.parent.gameObject.GetComponent<MovementController>().Direction;
 
-    // Use this for initialization
-    void Start () {
-    
-    }
-    
-    // Update is called once per frame
-    void Update () {
-        var playerDirection = this.transform.parent.gameObject.GetComponent<PlayerMovementController>().PlayerDirection;
-        //var playerPosition = this.transform.parent.transform.po
-
-        switch(playerDirection)
+        switch (direction)
         {
             case Direction.NORTH:
                 this.transform.localPosition = new Vector3(0, -1, 0);
