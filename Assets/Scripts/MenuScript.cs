@@ -18,6 +18,7 @@ public class MenuScript : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+
         _fadeTime = _fadeTimeTotal;
         _introMoveTime = _introMoveTimeTotal;
         _introFadeTime = _introFadeTimeTotal;
@@ -31,6 +32,7 @@ public class MenuScript : MonoBehaviour {
         float camHalfHeight = Camera.main.orthographicSize;
         GameObject logo = GameObject.FindGameObjectWithTag("Hud");
 
+        
         if (_introMoveTime >= 0 || _introFadeTime >= 0)
         {
             if (_introMoveTime >= 0)
