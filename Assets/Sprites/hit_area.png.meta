@@ -3,6 +3,7 @@ guid: 08edbd5cee589e845b56df1a23575bb7
 TextureImporter:
   fileIDToRecycleName:
     21300000: player_hit_area
+    21300002: hit_area
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,9 +27,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: 0
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
