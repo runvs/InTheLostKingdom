@@ -18,6 +18,7 @@ public class MenuScript : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+
         _fadeTime = _fadeTimeTotal;
         _introMoveTime = _introMoveTimeTotal;
         _introFadeTime = _introFadeTimeTotal;
@@ -31,6 +32,7 @@ public class MenuScript : MonoBehaviour {
         float camHalfHeight = Camera.main.orthographicSize;
         GameObject logo = GameObject.FindGameObjectWithTag("Hud");
 
+        
         if (_introMoveTime >= 0 || _introFadeTime >= 0)
         {
             if (_introMoveTime >= 0)
@@ -79,8 +81,9 @@ public class MenuScript : MonoBehaviour {
                 {
                     col = new Color(1.0f, 1.0f, 1.0f, 0);
                     GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().color = col;
-                    Instantiate(PlayerTemplate, new Vector3(-3, 1, 0), new Quaternion());
                     Application.LoadLevel("TestMap");
+                    Instantiate(PlayerTemplate, new Vector3(-3, 1, 0), new Quaternion());
+                    
 
                 }
                 GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().color = col;
