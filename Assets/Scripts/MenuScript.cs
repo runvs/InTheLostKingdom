@@ -79,8 +79,9 @@ public class MenuScript : MonoBehaviour {
                 {
                     col = new Color(1.0f, 1.0f, 1.0f, 0);
                     GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().color = col;
-                    Instantiate(PlayerTemplate, new Vector3(-3, 1, 0), new Quaternion());
                     Application.LoadLevel("TestMap");
+                    Instantiate(PlayerTemplate, new Vector3(-3, 1, 0), new Quaternion());
+                    
 
                 }
                 GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().color = col;
