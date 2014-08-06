@@ -14,8 +14,8 @@ PlayerSettings:
   productName: inthelostkingdom_
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  defaultScreenWidth: 1024
-  defaultScreenHeight: 768
+  defaultScreenWidth: 160
+  defaultScreenHeight: 144
   defaultScreenWidthWeb: 320
   defaultScreenHeightWeb: 288
   m_RenderingPath: 1
@@ -35,8 +35,8 @@ PlayerSettings:
   useOSAutorotation: 1
   use32BitDisplayBuffer: 1
   use24BitDepthBuffer: 1
-  defaultIsFullScreen: 1
-  defaultIsNativeResolution: 1
+  defaultIsFullScreen: 0
+  defaultIsNativeResolution: 0
   runInBackground: 1
   captureSingleScreen: 0
   Override IPod Music: 0
