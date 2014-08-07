@@ -15,6 +15,8 @@ public class MenuScript : MonoBehaviour {
 
     public GameObject PlayerTemplate;
 
+    public AudioClip _soundBlip;
+
     // Use this for initialization
     void Start()
     {
@@ -67,6 +69,8 @@ public class MenuScript : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 _fading = true;
+                audio.PlayOneShot(_soundBlip);
+
             }
 
             if (_fading)
