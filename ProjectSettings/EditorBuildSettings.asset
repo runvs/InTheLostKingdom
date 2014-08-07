@@ -11,3 +11,7 @@ EditorBuildSettings:
     path: Assets/TestMap.unity
   - enabled: 1
     path: Assets/Forest.unity
+  - enabled: 1
+    path: Assets/A1Sc2_Road.unity
+  - enabled: 1
+    path: Assets/A1Sc1_ThievesCamp.unity
