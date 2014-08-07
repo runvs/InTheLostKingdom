@@ -199,6 +199,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e1e265ea1ee004da1701a89d875e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Act1Finished: 0
+  A1S1Finished: 0
+  A1S2Finished: 0
+  A1S2_TalkRad: 0
+  A1S2_TalkSca: 0
+  A1S2_KilledE: 0
+  A1S2_TookRing: 0
+  A1S3Finished: 0
+  Act2Finished: 0
+  Act3Finished: 0
 --- !u!4 &1180988486
 Transform:
   m_ObjectHideFlags: 0

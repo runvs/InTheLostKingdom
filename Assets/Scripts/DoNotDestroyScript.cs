@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DoNotDestroyScript : MonoBehaviour {
+public class DoNotDestroyScript : MonoBehaviour 
+{
+
+
 
 	// Use this for initialization
 	void Start () 
@@ -10,7 +13,8 @@ public class DoNotDestroyScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+    {
 	
 	}
 }
