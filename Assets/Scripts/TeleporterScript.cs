@@ -41,14 +41,12 @@ public class TeleporterScript : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-       
         if (coll.gameObject.tag == "Player")
         {
             Debug.Log("Player hits Teleporter " + this.gameObject.name);
-            Debug.Log("Player is teleporting to " + TargetLevelName + " on Position " + TargetPosition.ToString() );
+            Debug.Log("Player is teleporting to " + TargetLevelName + " on Position " + TargetPosition.ToString());
             StartFade();
         }
-
     }
 
     private void StartFade()
