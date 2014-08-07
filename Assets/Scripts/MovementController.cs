@@ -28,9 +28,16 @@ public class MovementController : MonoBehaviour
             _rightSprite = (Sprite)sprites[2];
             _leftSprite = (Sprite)sprites[3];
         }
-        else
+        else if (this.tag == "Enemies")
         {
             _force = GameProperties.EnemyMoveForce;
+
+            var sprites = AssetDatabase.LoadAllAssetRepresentationsAtPath("Assets/Sprites/enemy.png");
+            _downSprite = (Sprite)sprites[1];
+            _upSprite = (Sprite)sprites[0];
+            _rightSprite = (Sprite)sprites[2];
+            _leftSprite = (Sprite)sprites[3];
+
         }
     }
 
@@ -49,23 +56,19 @@ public class MovementController : MonoBehaviour
             if (Input.GetAxis("Horizontal") > 0)
             {
                 MoveRight();
-                this.GetComponent<SpriteRenderer>().sprite = _rightSprite;
             }
             else if (Input.GetAxis("Horizontal") < 0)
             {
                 MoveLeft();
-                this.GetComponent<SpriteRenderer>().sprite = _leftSprite;
             }
 
             if (Input.GetAxis("Vertical") > 0)
             {
                 MoveDown();
-                this.GetComponent<SpriteRenderer>().sprite = _downSprite;
             }
             else if (Input.GetAxis("Vertical") < 0)
             {
                 MoveUp();
-                this.GetComponent<SpriteRenderer>().sprite = _upSprite;
             }
         }
     }
@@ -87,23 +90,27 @@ public class MovementController : MonoBehaviour
     {
         this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -GameProperties.PlayerMoveForce));
         this.Direction = Direction.NORTH;
+        this.GetComponent<SpriteRenderer>().sprite = _upSprite;
     }
 
     public void MoveDown()
     {
         this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, GameProperties.PlayerMoveForce));
         this.Direction = Direction.SOUTH;
+        this.GetComponent<SpriteRenderer>().sprite = _downSprite;
     }
 
     public void MoveRight()
     {
         this.GetComponent<Rigidbody2D>().AddForce(new Vector2(GameProperties.PlayerMoveForce, 0));
         this.Direction = Direction.EAST;
+        this.GetComponent<SpriteRenderer>().sprite = _rightSprite;
     }
 
     public void MoveLeft()
     {
         this.GetComponent<Rigidbody2D>().AddForce(new Vector2(-GameProperties.PlayerMoveForce, 0));
         this.Direction = Direction.WEST;
+        this.GetComponent<SpriteRenderer>().sprite = _leftSprite;
     }
 }
