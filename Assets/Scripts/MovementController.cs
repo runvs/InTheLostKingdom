@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 
 public enum Direction
 {
@@ -10,11 +11,22 @@ public class MovementController : MonoBehaviour
     public Direction Direction;
     private float _force;
 
+    private Sprite _leftSprite;
+    private Sprite _rightSprite;
+    private Sprite _upSprite;
+    private Sprite _downSprite;
+
     void Start()
     {
         if (this.tag == "Player")
         {
             _force = GameProperties.PlayerMoveForce;
+
+            var sprites = AssetDatabase.LoadAllAssetRepresentationsAtPath("Assets/Sprites/player.png");
+            _downSprite = (Sprite)sprites[1];
+            _upSprite = (Sprite)sprites[0];
+            _rightSprite = (Sprite)sprites[2];
+            _leftSprite = (Sprite)sprites[3];
         }
         else
         {
@@ -37,19 +49,23 @@ public class MovementController : MonoBehaviour
             if (Input.GetAxis("Horizontal") > 0)
             {
                 MoveRight();
+                this.GetComponent<SpriteRenderer>().sprite = _rightSprite;
             }
             else if (Input.GetAxis("Horizontal") < 0)
             {
                 MoveLeft();
+                this.GetComponent<SpriteRenderer>().sprite = _leftSprite;
             }
 
             if (Input.GetAxis("Vertical") > 0)
             {
                 MoveDown();
+                this.GetComponent<SpriteRenderer>().sprite = _downSprite;
             }
             else if (Input.GetAxis("Vertical") < 0)
             {
                 MoveUp();
+                this.GetComponent<SpriteRenderer>().sprite = _upSprite;
             }
         }
     }
