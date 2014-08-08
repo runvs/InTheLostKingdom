@@ -197,6 +197,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: 0
+  _leftSprite: {fileID: 21300008, guid: aabf6b8c1badfcc4c9f85da81c8eccd9, type: 3}
+  _rightSprite: {fileID: 21300006, guid: aabf6b8c1badfcc4c9f85da81c8eccd9, type: 3}
+  _upSprite: {fileID: 21300004, guid: aabf6b8c1badfcc4c9f85da81c8eccd9, type: 3}
+  _downSprite: {fileID: 21300002, guid: aabf6b8c1badfcc4c9f85da81c8eccd9, type: 3}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -220,6 +224,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 0
+  HeartFullTexture: {fileID: 2800000, guid: 32ef931db4525774a94fe9b932921bfa, type: 3}
+  HeartEmptyTexture: {fileID: 2800000, guid: 89617c365bd84c54aadb92550d525e39, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
