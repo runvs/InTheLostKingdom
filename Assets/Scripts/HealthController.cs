@@ -12,7 +12,7 @@ public class HealthController : MonoBehaviour
                 Health = GameProperties.PlayerMaxHealth;
                 break;
             case "Enemies":
-                Health = 4f;
+                Health = GameProperties.EnemyMaxHealth;
                 break;
         }
     }

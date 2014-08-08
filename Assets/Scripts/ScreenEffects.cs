@@ -29,19 +29,20 @@ public class ScreenEffects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Camera.main != null)
+        GameObject myCam = GameObject.FindGameObjectWithTag("MainCamera");
+        if (myCam != null)
         {
             if (RemainingShakeTime > 0.0f)
             {
 
                 ShakeAmount = RemainingShakeTime / TotalShakeTime * ShakeStrenght * 0.5f;
-                Camera.main.transform.position = Random.insideUnitSphere * ShakeAmount + new Vector3(0, 0, -10);
+                myCam.GetComponent<CameraFollowScript>().Offset = Random.insideUnitSphere * ShakeAmount;
                 RemainingShakeTime -= Time.deltaTime;
             }
             else
             {
                 RemainingShakeTime = 0.0f;
-                Camera.main.transform.position = new Vector3(0, 0, -10);
+                myCam.GetComponent<CameraFollowScript>().Offset = new Vector3(0, 0, -10);
             }
 
 
@@ -72,7 +73,10 @@ public class ScreenEffects : MonoBehaviour
             }
 
         }
-
+        else
+        {
+            Debug.Log("ScreenEffects: Camera is null");
+        }
 
 
 
@@ -80,6 +84,7 @@ public class ScreenEffects : MonoBehaviour
 
     public void ShakeScreen(float time, float strength)
     {
+        Debug.Log("Shake it baby!");
         RemainingShakeTime = time;
         TotalShakeTime = time;
         ShakeStrenght = strength;

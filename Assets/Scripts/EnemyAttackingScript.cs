@@ -3,13 +3,15 @@
 public class EnemyAttackingScript : MonoBehaviour
 {
     GameObject _player;
-    float _inputTimer = 0.0f;
+    public float _inputTimer = 0.0f;
+    public AudioClip AttackSound;
+    public AudioClip HitSound;
 
     void Update()
     {
         if (_inputTimer <= 0.0f)
         {
-            _inputTimer += GameProperties.BaseInputTimer;
+            _inputTimer += GameProperties.BaseInputTimer * 4.0f;
             var direction = this.transform.parent.GetComponent<MovementController>().Direction;
 
             if (_player != null)
@@ -31,6 +33,8 @@ public class EnemyAttackingScript : MonoBehaviour
                 }
 
                 _player.GetComponent<HealthController>().Health -= GameProperties.EnemyBaseDamage;
+                audio.PlayOneShot(HitSound);
+                GameObject.FindGameObjectWithTag("ScreenEffects").GetComponent<ScreenEffects>().ShakeScreen(0.35f, 1.0f);
                 Debug.Log("Hit player!");
             }
         }

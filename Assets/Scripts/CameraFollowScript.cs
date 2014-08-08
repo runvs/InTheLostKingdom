@@ -4,6 +4,7 @@ using System.Collections;
 public class CameraFollowScript : MonoBehaviour {
 
     GameObject Player;
+    public Vector3 Offset;
 
 	// Use this for initialization
 	void Start () 
@@ -19,7 +20,7 @@ public class CameraFollowScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        this.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, -10);
+        this.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, -10) + Offset;
 
 	}
 }

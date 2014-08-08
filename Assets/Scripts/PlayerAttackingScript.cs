@@ -6,6 +6,9 @@ public class PlayerAttackingScript : MonoBehaviour
     List<GameObject> _enemies;
     float _inputTimer = 0.0f;
 
+    public AudioClip AttackSound;
+    public AudioClip HitSound;
+
     void Start()
     {
         _enemies = new List<GameObject>();
@@ -13,10 +16,13 @@ public class PlayerAttackingScript : MonoBehaviour
 
     void Update()
     {
+        
         if (Input.GetButton("Fire1"))
         {
+            
             if (_inputTimer <= 0.0f)
             {
+                bool hasHit = false;
                 _inputTimer += GameProperties.BaseInputTimer;
                 var playerDirection = this.transform.parent.GetComponent<MovementController>().Direction;
 
@@ -42,9 +48,20 @@ public class PlayerAttackingScript : MonoBehaviour
                     }
 
                     enemy.GetComponent<HealthController>().Health -= GameProperties.PlayerBaseDamage;
+                    enemy.GetComponent<EnemyAttackingScript>()._inputTimer += 1.5f;
+                    hasHit = true;
                     Debug.Log("Hit enemy!");
                 }
+                if (hasHit)
+                {
+                    audio.PlayOneShot(HitSound);
+                }
+                else
+                {
+                    audio.PlayOneShot(AttackSound);
+                }
             }
+        
         }
 
         if (_inputTimer > 0)
