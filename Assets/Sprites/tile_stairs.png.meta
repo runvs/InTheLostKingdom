@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: ab7aba0113d4b8e468ebb13aefef5e13
+guid: ed015e5801a08084c8ed7d68ed843108
 TextureImporter:
   fileIDToRecycleName:
-    21300000: tile_templewall
+    21300000: tile_stairs
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
