@@ -4,7 +4,7 @@ using UnityEngine;
 public class HealthController : MonoBehaviour
 {
     public float Health;
-    private Dictionary<string, GameObject> _hearts = new Dictionary<string, GameObject>();
+    private Dictionary<string, GameObject> _hearts;
     public Texture HeartFullTexture;
     public Texture HeartEmptyTexture;
 
@@ -19,19 +19,6 @@ public class HealthController : MonoBehaviour
                 Health = GameProperties.EnemyMaxHealth;
                 break;
         }
-
-        if (this.tag == "Player")
-        {
-            // Add hearts to the dictionary for easier access
-            var hudObjects = GameObject.FindGameObjectsWithTag("Hud");
-            foreach (var hudObject in hudObjects)
-            {
-                if (hudObject.name.StartsWith("Health_"))
-                {
-                    _hearts.Add(hudObject.name, hudObject);
-                }
-            }
-        }
     }
 
     void Update()
@@ -43,6 +30,21 @@ public class HealthController : MonoBehaviour
 
         if (this.tag == "Player")
         {
+            if (_hearts == null || _hearts.Count == 0)
+            {
+                _hearts = new Dictionary<string, GameObject>();
+
+                // Add hearts to the dictionary for easier access
+                var hudObjects = GameObject.FindGameObjectsWithTag("Hud");
+                foreach (var hudObject in hudObjects)
+                {
+                    if (hudObject.name.StartsWith("Health_"))
+                    {
+                        _hearts.Add(hudObject.name, hudObject);
+                    }
+                }
+            }
+
             if (Health >= 3.5f)
             {
                 SetHeart(0, true);

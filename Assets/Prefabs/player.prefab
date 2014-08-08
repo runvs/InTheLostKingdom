@@ -32,7 +32,6 @@ GameObject:
   - 61: {fileID: 6100000}
   - 50: {fileID: 5000000}
   - 114: {fileID: 11400008}
-  - 114: {fileID: 11400006}
   - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: player
@@ -60,7 +59,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 0, z: 0}
+  m_LocalPosition: {x: -2.79755473, y: .279747218, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -201,17 +200,6 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: aabf6b8c1badfcc4c9f85da81c8eccd9, type: 3}
   _upSprite: {fileID: 21300004, guid: aabf6b8c1badfcc4c9f85da81c8eccd9, type: 3}
   _downSprite: {fileID: 21300002, guid: aabf6b8c1badfcc4c9f85da81c8eccd9, type: 3}
---- !u!114 &11400006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97d2d5a3331ae8240b494cf5aef31c37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073a721f623e8dc48a0e307d03f837f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 0
+  Health: 4
   HeartFullTexture: {fileID: 2800000, guid: 32ef931db4525774a94fe9b932921bfa, type: 3}
   HeartEmptyTexture: {fileID: 2800000, guid: 89617c365bd84c54aadb92550d525e39, type: 3}
 --- !u!212 &21200000
