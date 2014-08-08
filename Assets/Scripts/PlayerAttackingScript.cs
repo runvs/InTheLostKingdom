@@ -16,7 +16,7 @@ public class PlayerAttackingScript : MonoBehaviour
 
     void Update()
     {
-        
+
         if (Input.GetButton("Fire1"))
         {
             if (_inputTimer <= 0.0f)
@@ -46,10 +46,15 @@ public class PlayerAttackingScript : MonoBehaviour
                             break;
                     }
 
-                    enemy.GetComponent<HealthController>().Health -= GameProperties.PlayerBaseDamage;
-                    enemy.GetComponent<EnemyAttackingScript>()._inputTimer += 1.5f;
-                    hasHit = true;
                     Debug.Log("Hit enemy!");
+                    hasHit = true;
+                    enemy.GetComponent<HealthController>().Health -= GameProperties.PlayerBaseDamage;
+
+                    var enemyAttackingScript = enemy.GetComponent<EnemyAttackingScript>();
+                    if (enemyAttackingScript != null)
+                    {
+                        enemyAttackingScript._inputTimer += 1.5f;
+                    }
                 }
                 if (hasHit)
                 {
@@ -60,7 +65,7 @@ public class PlayerAttackingScript : MonoBehaviour
                     audio.PlayOneShot(AttackSound);
                 }
             }
-        
+
         }
 
         if (_inputTimer > 0)

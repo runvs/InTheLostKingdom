@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class TeleporterScript : MonoBehaviour {
+public class TeleporterScript : MonoBehaviour
+{
 
     public string TargetLevelName;
 
@@ -12,30 +12,30 @@ public class TeleporterScript : MonoBehaviour {
     private float remainingTimeUntilTeleport;
 
 
-	// Use this for initialization
-	void Start () 
+    // Use this for initialization
+    void Start()
     {
         isActive = false;// for later
-	}
-	
-	// Update is called once per frame
-	void Update () 
+    }
+
+    // Update is called once per frame
+    void Update()
     {
-        if(isActive)
+        if (isActive)
         {
-	        remainingTimeUntilTeleport -= Time.deltaTime;
-            if(remainingTimeUntilTeleport <= 0)
+            remainingTimeUntilTeleport -= Time.deltaTime;
+            if (remainingTimeUntilTeleport <= 0)
             {
                 Teleport();
             }
         }
-	}
+    }
 
     public void Teleport()
     {
         Debug.Log("Teleporting!!");
         GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(TargetPosition.x, TargetPosition.y);
-        Application.LoadLevel(TargetLevelName); 
+        Application.LoadLevel(TargetLevelName);
     }
 
 
