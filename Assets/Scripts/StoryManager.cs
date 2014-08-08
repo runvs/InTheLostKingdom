@@ -10,7 +10,11 @@ public class StoryManager : MonoBehaviour
     public AudioClip BipSound;
 
     public bool Act1Finished = false;
+
     public bool A1S1Finished = false;
+    public bool A1S1Talk1 = false;
+    public bool A1S1Talk2 = false;
+
 
     public bool A1S2Finished = false;
     public bool A1S2_TalkRad = false;
@@ -22,10 +26,23 @@ public class StoryManager : MonoBehaviour
 
     public bool Act2Finished = false;
 
+
     public bool Act3Finished = false;
+
+
+    public void FA1S1Talk1()
+    {
+        ShowText("... in the Lost Kingdom i would be some kind of Robin Hood.");
+    }
+    public void FA1S1Talk2()
+    {
+        ShowText("... So You mean stealing from the strong and giving the weak?");
+    }
 
     public void FA1S1Finished()
     {
+        Debug.Log("Teleporting!!");
+        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(7, 0);
         Application.LoadLevel("A1Sc2_Road");
     }
 

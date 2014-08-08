@@ -2846,11 +2846,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: a5de771ef7a40ca40a2f9e624d09c87a, type: 2}
       propertyPath: TargetLevelName
-      value: TestMap
+      value: A1Sc1_ThievesCamp
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: a5de771ef7a40ca40a2f9e624d09c87a, type: 2}
       propertyPath: m_Name
       value: Teleporter2Testmap
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a5de771ef7a40ca40a2f9e624d09c87a, type: 2}
+      propertyPath: TargetPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a5de771ef7a40ca40a2f9e624d09c87a, type: 2}
+      propertyPath: TargetPosition.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -6226,8 +6234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ffe4eecd8c77f844bac26818f7cfb62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetLevelName: TestMap
-  TargetPosition: {x: 0, y: 0}
+  TargetLevelName: A1Sc1_ThievesCamp
+  TargetPosition: {x: 5, y: 1}
 --- !u!61 &1838859684
 BoxCollider2D:
   m_ObjectHideFlags: 0

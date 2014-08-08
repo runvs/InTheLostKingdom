@@ -204,6 +204,8 @@ MonoBehaviour:
   BipSound: {fileID: 8300000, guid: 2f853559e42909141a3ddc09c02478c9, type: 3}
   Act1Finished: 0
   A1S1Finished: 0
+  A1S1Talk1: 0
+  A1S1Talk2: 0
   A1S2Finished: 0
   A1S2_TalkRad: 0
   A1S2_TalkSca: 0

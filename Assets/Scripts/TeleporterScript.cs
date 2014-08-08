@@ -31,7 +31,7 @@ public class TeleporterScript : MonoBehaviour {
         }
 	}
 
-    private void Teleport()
+    public void Teleport()
     {
         Debug.Log("Teleporting!!");
         GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(TargetPosition.x, TargetPosition.y);
