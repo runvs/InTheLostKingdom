@@ -24,6 +24,10 @@ public class StoryManager : MonoBehaviour
 
     public bool Act3Finished = false;
 
+    public void FA1S1Finished()
+    {
+        Application.LoadLevel("A1Sc2_Road");
+    }
 
     public void FA1S2_TalkRad()
     {
@@ -36,12 +40,20 @@ public class StoryManager : MonoBehaviour
     }
     public void FA1S2_KilledE()
     {
-        ShowText("Scaethys: Great! Whats in the Chest??");
+        ShowText("Scaethys: Great! Loot the Chest!");
     }
 
     public void FA1S2_TookRing()
     {
+        ShowText("Scaethys: Wow, that amulett is precious.");
+    }
 
+    public void FA1S2Finished()
+    {
+        
+        Debug.Log("Teleporting!!");
+        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(-1, -12);
+        Application.LoadLevel("A3Sc2_TempleShowdown");
     }
 
 
@@ -105,7 +117,7 @@ public class StoryManager : MonoBehaviour
     {
         MessageText.text = text;
         MessageText.enabled = true;
-        _deadTimer = 1.0f;
+        _deadTimer = 0.750f;
         audio.PlayOneShot(BipSound);
     }
 

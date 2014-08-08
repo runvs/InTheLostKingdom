@@ -2573,6 +2573,49 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5d191f07b93d94c4ea6be7a572f4057a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &208392021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 208392023}
+  - 114: {fileID: 208392022}
+  m_Layer: 0
+  m_Name: Story_FinishScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &208392022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 208392021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2dab851747fcbc42997d1d42a94c1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreCondition: A1S2_TookRing
+  StoryVariable: A1S2Finished
+  Once: 1
+  WaitTime: .5
+--- !u!4 &208392023
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 208392021}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.418281376, y: -.358991444, z: -2.43945312}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!1001 &212505851
 Prefab:
   m_ObjectHideFlags: 0
@@ -13823,6 +13866,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: 3
+  _leftSprite: {fileID: 21300008, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
 --- !u!114 &1146384105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13836,6 +13883,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 0
+  HeartFullTexture: {fileID: 0}
+  HeartEmptyTexture: {fileID: 0}
 --- !u!50 &1146384106
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -15436,6 +15485,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: 3
+  _leftSprite: {fileID: 21300008, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
 --- !u!114 &1330930722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15449,6 +15502,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 0
+  HeartFullTexture: {fileID: 0}
+  HeartEmptyTexture: {fileID: 0}
 --- !u!50 &1330930723
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -22911,6 +22966,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: 3
+  _leftSprite: {fileID: 21300008, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
 --- !u!114 &1871129239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22924,6 +22983,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 0
+  HeartFullTexture: {fileID: 0}
+  HeartEmptyTexture: {fileID: 0}
 --- !u!50 &1871129240
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -26174,7 +26235,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2136786549}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.25, y: 1.25}
   m_Center: {x: 0, y: 0}
 --- !u!114 &2136786552

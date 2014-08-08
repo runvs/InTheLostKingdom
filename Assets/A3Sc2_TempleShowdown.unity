@@ -2232,6 +2232,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: 2
+  _leftSprite: {fileID: 21300008, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
 --- !u!114 &94256856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2245,6 +2249,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 0
+  HeartFullTexture: {fileID: 0}
+  HeartEmptyTexture: {fileID: 0}
 --- !u!50 &94256857
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -5087,6 +5093,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: 3
+  _leftSprite: {fileID: 21300008, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
 --- !u!114 &220268332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5100,6 +5110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 0
+  HeartFullTexture: {fileID: 0}
+  HeartEmptyTexture: {fileID: 0}
 --- !u!50 &220268333
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -8954,6 +8966,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: 3
+  _leftSprite: {fileID: 21300008, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
 --- !u!114 &400587675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8967,6 +8983,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 0
+  HeartFullTexture: {fileID: 0}
+  HeartEmptyTexture: {fileID: 0}
 --- !u!50 &400587676
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -28753,6 +28771,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: 3
+  _leftSprite: {fileID: 21300008, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
 --- !u!114 &1357237902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28766,6 +28788,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 0
+  HeartFullTexture: {fileID: 0}
+  HeartEmptyTexture: {fileID: 0}
 --- !u!50 &1357237903
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -40976,6 +41000,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: 2
+  _leftSprite: {fileID: 21300008, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
 --- !u!114 &1950118515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40989,6 +41017,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 0
+  HeartFullTexture: {fileID: 0}
+  HeartEmptyTexture: {fileID: 0}
 --- !u!50 &1950118516
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -45554,6 +45584,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: 2
+  _leftSprite: {fileID: 21300008, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
 --- !u!114 &2120244232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45567,6 +45601,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 0
+  HeartFullTexture: {fileID: 0}
+  HeartEmptyTexture: {fileID: 0}
 --- !u!50 &2120244233
 Rigidbody2D:
   m_ObjectHideFlags: 0
