@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class ScreenEffects : MonoBehaviour 
+public class ScreenEffects : MonoBehaviour
 {
 
     float RemainingShakeTime = 0.0f;
@@ -29,21 +28,32 @@ public class ScreenEffects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         if (RemainingShakeTime > 0.0f)
         {
             GameObject myCam = GameObject.FindGameObjectWithTag("MainCamera");
             ShakeAmount = RemainingShakeTime / TotalShakeTime * ShakeStrenght * 0.5f;
-            myCam.GetComponent<CameraFollowScript>().Offset = Random.insideUnitSphere * ShakeAmount;
+
+            var followScript = myCam.GetComponent<CameraFollowScript>();
+            if (followScript != null)
+            {
+                followScript.Offset = Random.insideUnitSphere * ShakeAmount;
+            }
+
             RemainingShakeTime -= Time.deltaTime;
         }
         else if (RemainingShakeTime < 0.0f)
         {
             GameObject myCam = GameObject.FindGameObjectWithTag("MainCamera");
             RemainingShakeTime = 0.0f;
-            myCam.GetComponent<CameraFollowScript>().Offset = new Vector3(0, 0, -10);
+
+            var followScript = myCam.GetComponent<CameraFollowScript>();
+            if (followScript != null)
+            {
+                followScript.Offset = new Vector3(0, 0, -10);
+            }
         }
-        
+
 
 
 

@@ -23,8 +23,13 @@ public class HealthController : MonoBehaviour
 
     void Update()
     {
-        if (Health <= 0.0f && this.tag != "Player")
+        if (Health <= 0.0f)
         {
+            if (this.tag == "Player")
+            {
+                ResetGame();
+            }
+
             Destroy(this.gameObject);
         }
 
@@ -86,5 +91,17 @@ public class HealthController : MonoBehaviour
     private void SetHeart(int heartNumber, bool isFull)
     {
         _hearts["Health_" + heartNumber].GetComponent<GUITexture>().texture = isFull ? HeartFullTexture : HeartEmptyTexture;
+    }
+
+    private void ResetGame()
+    {
+        foreach (var heart in _hearts)
+        {
+            Destroy(heart.Value);
+        }
+
+        Destroy(GameObject.FindGameObjectWithTag("MainCamera"));
+
+        Application.LoadLevel("Menu");
     }
 }

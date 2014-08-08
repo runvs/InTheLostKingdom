@@ -10,7 +10,7 @@ public static class GameProperties
     public static float BaseInputTimer { get { return 0.2f; } }
 
     public static float EnemyKnockbackForce { get { return 400f; } }
-    public static float EnemyBaseDamage { get { return 0.37f; } }
+    public static float EnemyBaseDamage { get { return 0.75f; } }
     public static float EnemyMoveForce { get { return 150f; } }
 
     public static float EnemyMaxHealth { get { return 5f; } }
