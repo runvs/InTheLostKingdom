@@ -34,7 +34,7 @@ public class EnemyAttackingScript : MonoBehaviour
 
                 _player.GetComponent<HealthController>().Health -= GameProperties.EnemyBaseDamage;
                 audio.PlayOneShot(HitSound);
-                GameObject.FindGameObjectWithTag("ScreenEffects").GetComponent<ScreenEffects>().ShakeScreen(0.35f, 1.0f);
+                GameObject.FindGameObjectWithTag("ScreenEffects").GetComponent<ScreenEffects>().ShakeScreen(0.35f, .25f);
                 Debug.Log("Hit player!");
             }
         }
