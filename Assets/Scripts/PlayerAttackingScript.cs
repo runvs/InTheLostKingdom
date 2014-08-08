@@ -19,7 +19,6 @@ public class PlayerAttackingScript : MonoBehaviour
         
         if (Input.GetButton("Fire1"))
         {
-            
             if (_inputTimer <= 0.0f)
             {
                 bool hasHit = false;

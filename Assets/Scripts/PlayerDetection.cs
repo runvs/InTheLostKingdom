@@ -8,29 +8,32 @@ public class PlayerDetection : MonoBehaviour
     {
         if (_player != null)
         {
-            var vector = _player.transform.position - this.transform.parent.parent.position;
-            var angle = Mathf.Tan(vector.y / vector.x);
+            if (!GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StoryManager>().TextMessagePresent)
+            {
+                var vector = _player.transform.position - this.transform.parent.parent.position;
+                var angle = Mathf.Tan(vector.y / vector.x);
 
-            var movementController = this.transform.parent.parent.GetComponent<MovementController>();
+                var movementController = this.transform.parent.parent.GetComponent<MovementController>();
 
-            if ((angle >= (7 * Mathf.PI / 4) && angle <= (2 * Mathf.PI)) || (angle >= 0.0f && angle <= (Mathf.PI / 4)))
-            {
-                movementController.MoveLeft();
-            }
-            else if (angle > (Mathf.PI / 4) && angle <= (3 * Mathf.PI / 4))
-            {
-                movementController.MoveUp();
-            }
-            else if (angle > (3 * Mathf.PI / 4) && angle <= (5 * Mathf.PI / 4))
-            {
-                movementController.MoveRight();
-            }
-            else
-            {
-                movementController.MoveDown();
-            }
+                if ((angle >= (7 * Mathf.PI / 4) && angle <= (2 * Mathf.PI)) || (angle >= 0.0f && angle <= (Mathf.PI / 4)))
+                {
+                    movementController.MoveLeft();
+                }
+                else if (angle > (Mathf.PI / 4) && angle <= (3 * Mathf.PI / 4))
+                {
+                    movementController.MoveUp();
+                }
+                else if (angle > (3 * Mathf.PI / 4) && angle <= (5 * Mathf.PI / 4))
+                {
+                    movementController.MoveRight();
+                }
+                else
+                {
+                    movementController.MoveDown();
+                }
 
-            movementController.CapVelocity();
+                movementController.CapVelocity();
+            }
         }
     }
 

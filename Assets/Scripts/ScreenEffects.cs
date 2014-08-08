@@ -29,56 +29,48 @@ public class ScreenEffects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject myCam = GameObject.FindGameObjectWithTag("MainCamera");
-        if (myCam != null)
+        
+        if (RemainingShakeTime > 0.0f)
         {
-            if (RemainingShakeTime > 0.0f)
+            GameObject myCam = GameObject.FindGameObjectWithTag("MainCamera");
+            ShakeAmount = RemainingShakeTime / TotalShakeTime * ShakeStrenght * 0.5f;
+            myCam.GetComponent<CameraFollowScript>().Offset = Random.insideUnitSphere * ShakeAmount;
+            RemainingShakeTime -= Time.deltaTime;
+        }
+        else if (RemainingShakeTime < 0.0f)
+        {
+            GameObject myCam = GameObject.FindGameObjectWithTag("MainCamera");
+            RemainingShakeTime = 0.0f;
+            myCam.GetComponent<CameraFollowScript>().Offset = new Vector3(0, 0, -10);
+        }
+        
+
+
+
+        if (ScaleObjectsRemainingTime > 0.0f)
+        {
+            ScaleObjectsRemainingTime -= Time.deltaTime;
+
+            float currentScaleFactor = 1.0f + (ScaleObjectsFactor - 1.0f) * ScaleObjectsRemainingTime / ScaleObjectsTotalTime;
+            Vector3 scaleVector = new Vector3(currentScaleFactor, currentScaleFactor, currentScaleFactor);
+
+            //GameObject.FindGameObjectWithTag("Player").transform.localScale = scaleVector;
+            foreach (GameObject g in GameObject.FindGameObjectsWithTag("Enemies"))
             {
-
-                ShakeAmount = RemainingShakeTime / TotalShakeTime * ShakeStrenght * 0.5f;
-                myCam.GetComponent<CameraFollowScript>().Offset = Random.insideUnitSphere * ShakeAmount;
-                RemainingShakeTime -= Time.deltaTime;
-            }
-            else
-            {
-                RemainingShakeTime = 0.0f;
-                myCam.GetComponent<CameraFollowScript>().Offset = new Vector3(0, 0, -10);
-            }
-
-
-
-            if (ScaleObjectsRemainingTime > 0.0f)
-            {
-                ScaleObjectsRemainingTime -= Time.deltaTime;
-
-                float currentScaleFactor = 1.0f + (ScaleObjectsFactor - 1.0f) * ScaleObjectsRemainingTime / ScaleObjectsTotalTime;
-                Vector3 scaleVector = new Vector3(currentScaleFactor, currentScaleFactor, currentScaleFactor);
-
-                //GameObject.FindGameObjectWithTag("Player").transform.localScale = scaleVector;
-                foreach (GameObject g in GameObject.FindGameObjectsWithTag("Enemies"))
-                {
-                    g.transform.localScale = scaleVector;
-                }
-
-            }
-            else
-            {
-                ScaleObjectsRemainingTime = 0.0f;
-                Vector3 scaleVector = new Vector3(1.0f, 1.0f, 1.0f);
-                //GameObject.FindGameObjectWithTag("Player").transform.localScale = scaleVector;
-                foreach (GameObject g in GameObject.FindGameObjectsWithTag("Enemies"))
-                {
-                    g.transform.localScale = scaleVector;
-                }
+                g.transform.localScale = scaleVector;
             }
 
         }
         else
         {
-            Debug.Log("ScreenEffects: Camera is null");
+            ScaleObjectsRemainingTime = 0.0f;
+            Vector3 scaleVector = new Vector3(1.0f, 1.0f, 1.0f);
+            //GameObject.FindGameObjectWithTag("Player").transform.localScale = scaleVector;
+            foreach (GameObject g in GameObject.FindGameObjectsWithTag("Enemies"))
+            {
+                g.transform.localScale = scaleVector;
+            }
         }
-
-
 
     }
 

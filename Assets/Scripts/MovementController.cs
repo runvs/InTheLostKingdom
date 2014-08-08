@@ -53,22 +53,25 @@ public class MovementController : MonoBehaviour
     {
         if (this.tag == "Player")
         {
-            if (Input.GetAxis("Horizontal") > 0)
+            if (!GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StoryManager>().TextMessagePresent)
             {
-                MoveRight();
-            }
-            else if (Input.GetAxis("Horizontal") < 0)
-            {
-                MoveLeft();
-            }
+                if (Input.GetAxis("Horizontal") > 0)
+                {
+                    MoveRight();
+                }
+                else if (Input.GetAxis("Horizontal") < 0)
+                {
+                    MoveLeft();
+                }
 
-            if (Input.GetAxis("Vertical") > 0)
-            {
-                MoveDown();
-            }
-            else if (Input.GetAxis("Vertical") < 0)
-            {
-                MoveUp();
+                if (Input.GetAxis("Vertical") > 0)
+                {
+                    MoveDown();
+                }
+                else if (Input.GetAxis("Vertical") < 0)
+                {
+                    MoveUp();
+                }
             }
         }
     }
