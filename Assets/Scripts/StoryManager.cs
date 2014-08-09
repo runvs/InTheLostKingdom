@@ -143,7 +143,7 @@ public class StoryManager : MonoBehaviour
 
     public void FA1S2_TookRing()
     {
-        ShowText("Scaethys: Wow, that amulett \mis precious.");
+        ShowText("Scaethys: Wow, that amulett \nis precious.");
     }
     #endregion A1Sc2 Scripts
     public void FA1S2Finished()
