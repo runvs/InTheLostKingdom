@@ -24,7 +24,7 @@ public class MenuScript : MonoBehaviour {
         _fadeTime = _fadeTimeTotal;
         _introMoveTime = _introMoveTimeTotal;
         _introFadeTime = _introFadeTimeTotal;
-        GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().text = "In the lost Kingdom\n\nA Game by Julian Dinges @Thunraz \nAnd Simon Weis @Laguna_999 \n\nPress Space to start!";
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().text = "In the lost Kingdom\n\nA Game by runvs for GBJam 3, August 2014 \nJulian Thunraz Dinges \nAnd Simon Laguna Weis \n\nPress lctrl to start!";
         GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().color = new Color(1.0f, 1.0f, 1.0f, 0);
     }
 
@@ -66,7 +66,7 @@ public class MenuScript : MonoBehaviour {
                 float alphaval = ((float)(PennerDoubleEquation.GetValue(PennerDoubleEquation.EquationType.Linear, -_introFadeTime, 0.0f, 1.0f, _introFadeTimeTotal)));
                 GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().color = new Color(0.682f, 0.768f, 0.25f, alphaval);
             }
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.LeftControl))
             {
                 _fading = true;
                 audio.PlayOneShot(_soundBlip);

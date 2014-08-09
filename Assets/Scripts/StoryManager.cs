@@ -37,7 +37,21 @@ public class StoryManager : MonoBehaviour
 
     
     public bool Act2Finished = false;
-    
+
+    public bool A2S1Finished = false;
+    public bool A2S1Talk1 = false;
+    public bool A2S1Talk2 = false;
+    public bool A2S1Talk3 = false;
+    public bool A2S1Talk4 = false;
+    public bool A2S1Talk5 = false;
+    public bool A2S1Talk6 = false;
+    public bool A2S1Talk7 = false;
+    public bool A2S1Talk8 = false;
+    public bool A2S1Talk9 = false;
+    public bool A2S1Talk10 = false;
+    public bool A2S1Talk11 = false;
+    public bool A2S1Talk12 = false;
+
     public bool A2S2Fininished = false;
     public bool A2S2_FoundHut = false;
     public bool A2S2_Talk1 = false;
@@ -130,12 +144,12 @@ public class StoryManager : MonoBehaviour
     #region A1Sc2 Scripts
     public void FA1S2_TalkRad()
     {
-        ShowText("Radath: I will smack them hard!");
+        ShowText("Radath: To hit an enemy, \njust press ctrl!");
     }
 
     public void FA1S2_TalkSca()
     {
-        ShowText("Scaethys: Lets do this!");
+        ShowText("Scaethys: You should try to \nevade their hits!");
     }
     public void FA1S2_KilledE()
     {
@@ -144,12 +158,69 @@ public class StoryManager : MonoBehaviour
 
     public void FA1S2_TookRing()
     {
-        ShowText("Scaethys: Wow, that amulett \nis precious.");
+        ShowText("Scaethys: Wow, that amulett \nis precious. I will take it.");
     }
     #endregion A1Sc2 Scripts
     public void FA1S2Finished()
     {
         
+        Debug.Log("Teleporting!!");
+        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(6, 2);
+        Application.LoadLevel("A2Sc1_ThievesCamp");
+    }
+
+	#region A2S1 ScriptSequence
+	public void  FA2S1Talk1  () 
+    {
+        ShowText("Scaethys: Finally we managed\nto get at least one job done!");
+    }
+    public void  FA2S1Talk2  () 
+    {
+        ShowText("Scaethys: An with the prey\nwe can now live like kings!");
+    }
+    public void  FA2S1Talk3  () 
+    {
+        ShowText("Radath (whispers): \nFor two days? No longer!");
+    }
+    public void  FA2S1Talk4  () 
+    {
+        ShowText("Scaethys: You, don't grumble.\nWith my plan i got us real food!"); 
+    }
+    public void  FA2S1Talk5  () 
+    {
+        ShowText("Radath: Yeah Scaethys, you are right!"); 
+    }
+    public void  FA2S1Talk6  () 
+    {
+        ShowText("Scaethys: Tomorrow I will \nkeep ... erm sell this amulett..."); 
+    }
+    public void  FA2S1Talk7  () 
+    {
+        ShowText("Scaethys: And you two will do the next job."); 
+    }
+    public void  FA2S1Talk8  () 
+    {
+        ShowText("Scaethys: I know an old clairvoyant\n in the forest."); 
+    }
+    public void  FA2S1Talk9  () 
+    {
+        ShowText("Radath (whispers): No good deeds to expect from you."); 
+    }
+    public void  FA2S1Talk10 ()
+    {
+        ShowText("Scaethys: Shut up and eat!"); 
+    }
+    public void  FA2S1Talk11 () 
+    {
+    
+    }
+    public void  FA2S1Talk12 () 
+    {
+    
+    }
+	#endregion A2S1 ScriptSequence
+	public void FA2S1Finished()
+    {
         Debug.Log("Teleporting!!");
         GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(-2, -3);
         Application.LoadLevel("A2Sc2_ForestHut");
@@ -309,7 +380,7 @@ public class StoryManager : MonoBehaviour
     {
         MessageText.text = text;
         MessageText.enabled = true;
-        _deadTimer = 0.750f;
+        _deadTimer = 0.650f;
         audio.PlayOneShot(BipSound);
     }
 

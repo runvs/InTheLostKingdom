@@ -618,7 +618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27658a7154adeab45be5a90a2599bfde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreCondition: A1S2_TalkRad
+  PreCondition: 
   StoryVariable: A1S2_KilledE
   Once: 1
 --- !u!4 &34525997
@@ -26209,7 +26209,7 @@ GameObject:
   - 114: {fileID: 2136786552}
   - 61: {fileID: 2136786551}
   m_Layer: 9
-  m_Name: GameObject
+  m_Name: StoryElement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

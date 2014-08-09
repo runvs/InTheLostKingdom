@@ -2423,8 +2423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2dab851747fcbc42997d1d42a94c1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreCondition: A1S1Talk9
-  StoryVariable: A1S1Talk10
+  PreCondition: A2S1Talk9
+  StoryVariable: A2S1Talk10
   Once: 1
   WaitTime: .5
 --- !u!4 &263225612
@@ -2579,8 +2579,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2dab851747fcbc42997d1d42a94c1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreCondition: A1S1Talk8
-  StoryVariable: A1S1Talk9
+  PreCondition: A2S1Talk8
+  StoryVariable: A2S1Talk9
   Once: 1
   WaitTime: .5
 --- !u!4 &294440054
@@ -2595,49 +2595,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
---- !u!1 &304579790
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 304579792}
-  - 114: {fileID: 304579791}
-  m_Layer: 0
-  m_Name: Story13
-  m_TagString: StoryElements
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &304579791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 304579790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2dab851747fcbc42997d1d42a94c1da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PreCondition: A1S1Talk13
-  StoryVariable: A1S1Talk14
-  Once: 1
-  WaitTime: .5
---- !u!4 &304579792
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 304579790}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.17173386, y: 3.02732325, z: -2.43945312}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
 --- !u!1 &320270618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,8 +2796,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2dab851747fcbc42997d1d42a94c1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreCondition: A1S1Talk10
-  StoryVariable: A1S1Talk11
+  PreCondition: A2S1Talk10
+  StoryVariable: A2S1Talk11
   Once: 1
   WaitTime: .5
 --- !u!4 &325430688
@@ -3107,49 +3064,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!1 &349261430
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 349261432}
-  - 114: {fileID: 349261431}
-  m_Layer: 0
-  m_Name: Story14
-  m_TagString: StoryElements
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &349261431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 349261430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2dab851747fcbc42997d1d42a94c1da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PreCondition: A1S1Talk14
-  StoryVariable: A1S1Talk15
-  Once: 1
-  WaitTime: .5
---- !u!4 &349261432
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 349261430}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.17173386, y: 3.02732325, z: -2.43945312}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
 --- !u!1 &350905890
 GameObject:
   m_ObjectHideFlags: 0
@@ -3195,7 +3109,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 350905890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.63578415, y: 5.29818678, z: 0}
+  m_LocalPosition: {x: 7.37001228, y: 3.81745839, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3348,8 +3262,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2dab851747fcbc42997d1d42a94c1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreCondition: A1S1Talk5
-  StoryVariable: A1S1Talk6
+  PreCondition: A2S1Talk5
+  StoryVariable: A2S1Talk6
   Once: 1
   WaitTime: .5
 --- !u!4 &367234232
@@ -4893,8 +4807,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2dab851747fcbc42997d1d42a94c1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreCondition: A1S1Talk2
-  StoryVariable: A1S1Talk3
+  PreCondition: A2S1Talk2
+  StoryVariable: A2S1Talk3
   Once: 1
   WaitTime: .5
 --- !u!4 &508618707
@@ -5087,49 +5001,6 @@ Prefab:
   m_RootGameObject: {fileID: 1761839966}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &514503469
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 514503471}
-  - 114: {fileID: 514503470}
-  m_Layer: 0
-  m_Name: Story12
-  m_TagString: StoryElements
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &514503470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 514503469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2dab851747fcbc42997d1d42a94c1da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PreCondition: A1S1Talk12
-  StoryVariable: A1S1Talk13
-  Once: 1
-  WaitTime: .5
---- !u!4 &514503471
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 514503469}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.17173386, y: 3.02732325, z: -2.43945312}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
 --- !u!1001 &515459424
 Prefab:
   m_ObjectHideFlags: 0
@@ -5683,7 +5554,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 567550220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.27978897, y: 5.27339125, z: 0}
+  m_LocalPosition: {x: 4.63434315, y: 3.8306303, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6006,8 +5877,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2dab851747fcbc42997d1d42a94c1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreCondition: A1S1Talk1
-  StoryVariable: A1S1Talk2
+  PreCondition: A2S1Talk1
+  StoryVariable: A2S1Talk2
   Once: 1
   WaitTime: .5
 --- !u!4 &588172441
@@ -7864,6 +7735,49 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 28ae7e62711876e498109c27158d7c6d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &819349682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 819349684}
+  - 114: {fileID: 819349683}
+  m_Layer: 0
+  m_Name: Story12
+  m_TagString: StoryElements
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &819349683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 819349682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2dab851747fcbc42997d1d42a94c1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreCondition: A2S1Talk12
+  StoryVariable: A2S1Finished
+  Once: 1
+  WaitTime: .5
+--- !u!4 &819349684
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 819349682}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.17173386, y: 3.02732325, z: -2.43945312}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
 --- !u!1001 &819557745
 Prefab:
   m_ObjectHideFlags: 0
@@ -12406,8 +12320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2dab851747fcbc42997d1d42a94c1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreCondition: A1S1Talk6
-  StoryVariable: A1S1Talk7
+  PreCondition: A2S1Talk6
+  StoryVariable: A2S1Talk7
   Once: 1
   WaitTime: .5
 --- !u!4 &1127595685
@@ -12813,8 +12727,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2dab851747fcbc42997d1d42a94c1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreCondition: A1S1Talk3
-  StoryVariable: A1S1Talk4
+  PreCondition: A2S1Talk3
+  StoryVariable: A2S1Talk4
   Once: 1
   WaitTime: .5
 --- !u!4 &1153986919
@@ -13021,8 +12935,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2dab851747fcbc42997d1d42a94c1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreCondition: A1S1Talk7
-  StoryVariable: A1S1Talk8
+  PreCondition: A2S1Talk7
+  StoryVariable: A2S1Talk8
   Once: 1
   WaitTime: .5
 --- !u!4 &1179223811
@@ -13781,7 +13695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PreCondition: 
-  StoryVariable: A1S1Talk1
+  StoryVariable: A2S1Talk1
   Once: 1
   WaitTime: .5
 --- !u!4 &1280579364
@@ -14984,6 +14898,33 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 28ae7e62711876e498109c27158d7c6d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1406796052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1406796053}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1406796053
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1406796052}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.95691299, y: 1.81281757, z: -.0935058594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
 --- !u!1001 &1413028762
 Prefab:
   m_ObjectHideFlags: 0
@@ -18544,8 +18485,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2dab851747fcbc42997d1d42a94c1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreCondition: A1S1Talk4
-  StoryVariable: A1S1Talk5
+  PreCondition: A2S1Talk4
+  StoryVariable: A2S1Talk5
   Once: 1
   WaitTime: .5
 --- !u!4 &1774741253
@@ -20980,8 +20921,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2dab851747fcbc42997d1d42a94c1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreCondition: A1S1Talk11
-  StoryVariable: A1S1Talk12
+  PreCondition: A2S1Talk11
+  StoryVariable: A2S1Talk12
   Once: 1
   WaitTime: .5
 --- !u!4 &2055154411
