@@ -40,6 +40,15 @@ public class StoryManager : MonoBehaviour
 
     public bool Act3Finished = false;
 
+    public bool A3S2Finished = false;
+    public bool A3S2_EnterTem = false;
+    public bool A3S2_TemTalk1 = false;
+    public bool A3S2_KilledSc = false;
+    public bool A3S2_FinTalk1 = false;
+    public bool A3S2_FinTalk2 = false;
+    public bool A3S2_FinTalk3 = false;
+    public bool A3S2_FinTalk4 = false;
+
     #region A1Sc1 ScriptSequence
     public void FA1S1Talk1()
     {
@@ -106,7 +115,7 @@ public class StoryManager : MonoBehaviour
     }
 
  
-
+    #region A1Sc2 Scripts
     public void FA1S2_TalkRad()
     {
         ShowText("Radath: I will smack them hard!");
@@ -125,7 +134,7 @@ public class StoryManager : MonoBehaviour
     {
         ShowText("Scaethys: Wow, that amulett is precious.");
     }
-
+    #endregion A1Sc2 Scripts
     public void FA1S2Finished()
     {
         
@@ -134,7 +143,46 @@ public class StoryManager : MonoBehaviour
         Application.LoadLevel("A3Sc2_TempleShowdown");
     }
 
+    public void FA3S2_EnterTem()
+    {
+        ShowText("Scaethys: I have expected you.");
+    }
+    public void FA3S2_TemTalk1()
+    {
+        ShowText("Scaethys: You will not hand over the amulet.");
+    }
 
+    public void FA3S2_KilledSc()
+    {
+
+    }
+
+    public void FA3S2_FinTalk1()
+    {
+
+    }
+    public void FA3S2_FinTalk2()
+    {
+
+    }
+    public void FA3S2_FinTalk3()
+    {
+
+    }
+    public void FA3S2_FinTalk4()
+    {
+        ChangeValue("A3S2Finished");
+    }
+
+    public void FA3S2Finished()
+    {
+        ChangeValue("Act3Finished");
+    }
+
+    public void FAct3Finished()
+    {
+        // Finish Game, switch to credits or menu
+    }
 
 
     [HideInInspector]
