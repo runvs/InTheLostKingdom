@@ -51,6 +51,7 @@ public class StoryManager : MonoBehaviour
     public bool A2S1Talk12 = false;
 
     public bool A2S2Fininished = false;
+    public bool A2S2_RadTalk = false;
     public bool A2S2_FoundHut = false;
     public bool A2S2_Talk1 = false;
     public bool A2S2_Talk2 = false;
@@ -225,10 +226,18 @@ public class StoryManager : MonoBehaviour
     }
 
     #region A2S2 Scripts
+
+    public void FA2S2_RadTalk()
+    {
+        ShowText("Radath: Ok, lets do this!\nThough Scaethys behavevd strange.");
+    }
+
     public void FA2S2_FoundHut()
     {
-        // TODO make clairvoyant appear
+        GameObject.FindGameObjectWithTag("finalboss").GetComponent<SpriteRenderer>().enabled = true;
+        GameObject.FindGameObjectWithTag("finalboss").transform.GetChild(0).GetComponent<ParticleSystem>().Play();
     }
+
     public void FA2S2_Talk1()
     {
         ShowText("Radath: I cannot move! Help me!");

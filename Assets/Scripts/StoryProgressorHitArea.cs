@@ -28,7 +28,7 @@ public class StoryProgressorHitArea : MonoBehaviour
         }
     }
 
-    private bool CheckPreCondition()
+    public bool CheckPreCondition()
     {
         if(string.IsNullOrEmpty(PreCondition))
         {
