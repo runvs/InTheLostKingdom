@@ -6,6 +6,7 @@ public class StoryManager : MonoBehaviour
     private float _deadTimer;
 
     public AudioClip BipSound;
+    public AudioClip MagicEffectSound;
 
     public bool Act1Finished = false;
 
@@ -236,6 +237,7 @@ public class StoryManager : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("finalboss").GetComponent<SpriteRenderer>().enabled = true;
         GameObject.FindGameObjectWithTag("finalboss").transform.GetChild(0).GetComponent<ParticleSystem>().Play();
+        audio.PlayOneShot(MagicEffectSound);
     }
 
     public void FA2S2_Talk1()

@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BipSound: {fileID: 8300000, guid: 2f853559e42909141a3ddc09c02478c9, type: 3}
+  MagicEffectSound: {fileID: 8300000, guid: 3b788d96db48c7845b973d9cb6bb0e38, type: 3}
   Act1Finished: 0
   A1S1Finished: 0
   A1S1Talk1: 0
@@ -239,6 +240,7 @@ MonoBehaviour:
   A2S1Talk11: 0
   A2S1Talk12: 0
   A2S2Fininished: 0
+  A2S2_RadTalk: 0
   A2S2_FoundHut: 0
   A2S2_Talk1: 0
   A2S2_Talk2: 0
