@@ -226,6 +226,19 @@ MonoBehaviour:
   A1S2_TookRing: 0
   A1S3Finished: 0
   Act2Finished: 0
+  A2S1Finished: 0
+  A2S1Talk1: 0
+  A2S1Talk2: 0
+  A2S1Talk3: 0
+  A2S1Talk4: 0
+  A2S1Talk5: 0
+  A2S1Talk6: 0
+  A2S1Talk7: 0
+  A2S1Talk8: 0
+  A2S1Talk9: 0
+  A2S1Talk10: 0
+  A2S1Talk11: 0
+  A2S1Talk12: 0
   A2S2Fininished: 0
   A2S2_FoundHut: 0
   A2S2_Talk1: 0
