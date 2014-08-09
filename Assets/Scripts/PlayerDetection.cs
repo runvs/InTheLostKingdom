@@ -10,26 +10,29 @@ public class PlayerDetection : MonoBehaviour
         {
             if (!GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StoryManager>().TextMessagePresent)
             {
-                var vector = _player.transform.position - this.transform.parent.parent.position;
-                var angle = Mathf.Atan2(vector.y, vector.x);
-
+                Vector3  vector = (_player.transform.position - this.transform.parent.parent.position).normalized;
+                var angle = Mathf.Atan(vector.y / vector.x) + ((Mathf.Sign(vector.x) < 0) ? Mathf.PI : 0);
+                while(angle>2.0*Mathf.PI)
+                {
+                    angle -= 2.0f * Mathf.PI;
+                }
                 var movementController = this.transform.parent.parent.GetComponent<MovementController>();
 
                 
-                if (angle > 1.0 / 4.0 * Mathf.PI && angle < 3.0 / 4.0 * Mathf.PI)
+                if (angle >= 1.0 / 4.0 * Mathf.PI && angle < 3.0 / 4.0 * Mathf.PI)
                 {
-                    movementController.MoveDown();
-                    Debug.Log(vector.x + " " + vector.y + " " + angle + "Down");
+                    movementController.MoveUp();
+                    Debug.Log(vector.x + " " + vector.y + " " + angle + "Up");
                 }
-                else if (angle < 5.0 / 4.0 * Mathf.PI)
+                else if (angle >= 3.0 / 4.0 * Mathf.PI && angle < 5.0 / 4.0 * Mathf.PI)
                 {
                     movementController.MoveLeft();
                     Debug.Log(vector.x + " " + vector.y + " " + angle + "Left");
                 }
-                else if (angle  < 7.0/4.0 * Mathf.PI)
+                else if (angle >= 5.0 / 4.0 * Mathf.PI &&  angle < 7.0 / 4.0 * Mathf.PI)
                 {
-                    movementController.MoveUp();
-                    Debug.Log(vector.x + " " + vector.y + " " + angle + "Up");
+                    movementController.MoveDown();
+                    Debug.Log(vector.x + " " + vector.y + " " + angle + "Down");
                 }
                 else
                 {

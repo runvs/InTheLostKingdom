@@ -51,11 +51,11 @@ public class MovementController : MonoBehaviour
                     MoveLeft();
                 }
 
-                if (Input.GetAxis("Vertical") > 0)
+                if (Input.GetAxis("Vertical") < 0)
                 {
                     MoveDown();
                 }
-                else if (Input.GetAxis("Vertical") < 0)
+                else if (Input.GetAxis("Vertical") > 0)
                 {
                     MoveUp();
                 }
@@ -78,14 +78,14 @@ public class MovementController : MonoBehaviour
 
     public void MoveUp()
     {
-        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -_force));
+        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, _force));
         this.Direction = Direction.NORTH;
         this.GetComponent<SpriteRenderer>().sprite = _upSprite;
     }
 
     public void MoveDown()
     {
-        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, _force));
+        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -_force));
         this.Direction = Direction.SOUTH;
         this.GetComponent<SpriteRenderer>().sprite = _downSprite;
     }
