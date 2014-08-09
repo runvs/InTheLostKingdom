@@ -602,7 +602,7 @@ GameObject:
   - 114: {fileID: 34525996}
   m_Layer: 0
   m_Name: Story_CheckEnemiesDead
-  m_TagString: Untagged
+  m_TagString: StoryElements
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2584,7 +2584,7 @@ GameObject:
   - 114: {fileID: 208392022}
   m_Layer: 0
   m_Name: Story_FinishScene
-  m_TagString: Untagged
+  m_TagString: StoryElements
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

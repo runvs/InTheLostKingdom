@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerAttackingScript : MonoBehaviour
 {
     List<GameObject> _enemies;
-    float _inputTimer = 0.0f;
+    public float _inputTimer = 0.0f;
 
     public AudioClip AttackSound;
     public AudioClip HitSound;
@@ -16,56 +16,62 @@ public class PlayerAttackingScript : MonoBehaviour
 
     void Update()
     {
-
-        if (Input.GetButton("Fire1"))
+        // check if there is a message present
+        if (!GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StoryManager>().TextMessagePresent) 
         {
-            if (_inputTimer <= 0.0f)
+            if (Input.GetButton("Fire1"))
             {
-                bool hasHit = false;
-                _inputTimer += GameProperties.BaseInputTimer;
-                var playerDirection = this.transform.parent.GetComponent<MovementController>().Direction;
-
-                foreach (var enemy in _enemies)
+                if (_inputTimer <= 0.0f)
                 {
-                    if (enemy == null)
-                        continue;
+                    bool hasHit = false;
+                    _inputTimer += GameProperties.BaseInputTimer * 2.0f;
+                    var playerDirection = this.transform.parent.GetComponent<MovementController>().Direction;
 
-                    switch (playerDirection)
+                    foreach (var enemy in _enemies)
                     {
-                        case Direction.NORTH:
-                            enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -GameProperties.PlayerHitKnockbackForce));
-                            break;
-                        case Direction.EAST:
-                            enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(GameProperties.PlayerHitKnockbackForce, 0));
-                            break;
-                        case Direction.SOUTH:
-                            enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, GameProperties.PlayerHitKnockbackForce));
-                            break;
-                        case Direction.WEST:
-                            enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(-GameProperties.PlayerHitKnockbackForce, 0));
-                            break;
+                        if (enemy == null)
+                            continue;
+
+                        switch (playerDirection)
+                        {
+                            case Direction.NORTH:
+                                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -GameProperties.PlayerHitKnockbackForce));
+                                break;
+                            case Direction.EAST:
+                                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(GameProperties.PlayerHitKnockbackForce, 0));
+                                break;
+                            case Direction.SOUTH:
+                                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, GameProperties.PlayerHitKnockbackForce));
+                                break;
+                            case Direction.WEST:
+                                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(-GameProperties.PlayerHitKnockbackForce, 0));
+                                break;
+                        }
+
+                        Debug.Log("Hit enemy!");
+                        hasHit = true;
+                        enemy.GetComponent<HealthController>().Health -= GameProperties.PlayerBaseDamage;
+
+                        var enemyAttackingScript = enemy.transform.GetChild(0).GetComponent<EnemyAttackingScript>();
+                        if (enemyAttackingScript != null)
+                        {
+                            enemyAttackingScript._inputTimer += 1.5f;
+                        }
+                        else
+                        { 
+                            Debug.Log("No AttackingScript on Enemy."); 
+                        }
                     }
-
-                    Debug.Log("Hit enemy!");
-                    hasHit = true;
-                    enemy.GetComponent<HealthController>().Health -= GameProperties.PlayerBaseDamage;
-
-                    var enemyAttackingScript = enemy.GetComponent<EnemyAttackingScript>();
-                    if (enemyAttackingScript != null)
+                    if (hasHit)
                     {
-                        enemyAttackingScript._inputTimer += 1.5f;
+                        audio.PlayOneShot(HitSound);
                     }
-                }
-                if (hasHit)
-                {
-                    audio.PlayOneShot(HitSound);
-                }
-                else
-                {
-                    audio.PlayOneShot(AttackSound);
+                    else
+                    {
+                        audio.PlayOneShot(AttackSound);
+                    }
                 }
             }
-
         }
 
         if (_inputTimer > 0)

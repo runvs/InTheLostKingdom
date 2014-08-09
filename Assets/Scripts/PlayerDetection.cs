@@ -11,26 +11,49 @@ public class PlayerDetection : MonoBehaviour
             if (!GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StoryManager>().TextMessagePresent)
             {
                 var vector = _player.transform.position - this.transform.parent.parent.position;
-                var angle = Mathf.Tan(vector.y / vector.x);
+                var angle = Mathf.Atan2(vector.y, vector.x);
 
                 var movementController = this.transform.parent.parent.GetComponent<MovementController>();
 
-                if ((angle >= (7 * Mathf.PI / 4) && angle <= (2 * Mathf.PI)) || (angle >= 0.0f && angle <= (Mathf.PI / 4)))
+                
+                if (angle > 1.0 / 4.0 * Mathf.PI && angle < 3.0 / 4.0 * Mathf.PI)
+                {
+                    movementController.MoveDown();
+                    Debug.Log(vector.x + " " + vector.y + " " + angle + "Down");
+                }
+                else if (angle < 5.0 / 4.0 * Mathf.PI)
                 {
                     movementController.MoveLeft();
+                    Debug.Log(vector.x + " " + vector.y + " " + angle + "Left");
                 }
-                else if (angle > (Mathf.PI / 4) && angle <= (3 * Mathf.PI / 4))
+                else if (angle  < 7.0/4.0 * Mathf.PI)
                 {
                     movementController.MoveUp();
-                }
-                else if (angle > (3 * Mathf.PI / 4) && angle <= (5 * Mathf.PI / 4))
-                {
-                    movementController.MoveRight();
+                    Debug.Log(vector.x + " " + vector.y + " " + angle + "Up");
                 }
                 else
                 {
-                    movementController.MoveDown();
+                    movementController.MoveRight();
+                    Debug.Log(vector.x + " " + vector.y + " " + angle + "Right");
                 }
+
+
+                //if ((angle >= (7.0 * Mathf.PI / 4.0) && angle <= (2.0 * Mathf.PI)) || (angle >= 0.0f && angle <= (Mathf.PI / 4.0)))
+                //{
+                //    movementController.MoveLeft();
+                //}
+                //else if (angle > (Mathf.PI / 4) && angle <= (3 * Mathf.PI / 4))
+                //{
+                //    movementController.MoveUp();
+                //}
+                //else if (angle > (3 * Mathf.PI / 4) && angle <= (5 * Mathf.PI / 4))
+                //{
+                //    movementController.MoveRight();
+                //}
+                //else
+                //{
+                //    movementController.MoveDown();
+                //}
 
                 movementController.CapVelocity();
             }

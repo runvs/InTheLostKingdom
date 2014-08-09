@@ -2854,11 +2854,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: a5de771ef7a40ca40a2f9e624d09c87a, type: 2}
       propertyPath: TargetPosition.x
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: a5de771ef7a40ca40a2f9e624d09c87a, type: 2}
       propertyPath: TargetPosition.y
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -6235,7 +6235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetLevelName: A1Sc1_ThievesCamp
-  TargetPosition: {x: 5, y: 1}
+  TargetPosition: {x: 6, y: 4}
 --- !u!61 &1838859684
 BoxCollider2D:
   m_ObjectHideFlags: 0

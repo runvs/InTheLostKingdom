@@ -14,7 +14,18 @@ public class StoryManager : MonoBehaviour
     public bool A1S1Finished = false;
     public bool A1S1Talk1 = false;
     public bool A1S1Talk2 = false;
-
+    public bool A1S1Talk3 = false;
+    public bool A1S1Talk4 = false;
+    public bool A1S1Talk5 = false;
+    public bool A1S1Talk6 = false;
+    public bool A1S1Talk7 = false;
+    public bool A1S1Talk8 = false;
+    public bool A1S1Talk9 = false;
+    public bool A1S1Talk10 = false;
+    public bool A1S1Talk11 = false;
+    public bool A1S1Talk12 = false;
+    public bool A1S1Talk13 = false;
+    public bool A1S1Talk14 = false;
 
     public bool A1S2Finished = false;
     public bool A1S2_TalkRad = false;
@@ -29,22 +40,72 @@ public class StoryManager : MonoBehaviour
 
     public bool Act3Finished = false;
 
-
+    #region A1Sc1 ScriptSequence
     public void FA1S1Talk1()
     {
-        ShowText("... in the Lost Kingdom i would be some kind of Robin Hood.");
+        ShowText("Scaethys: ... in the Lost Kingdom i would be some kind of Robin Hood.");
     }
     public void FA1S1Talk2()
     {
-        ShowText("... So You mean stealing from the strong and giving the weak?");
+        ShowText("Radath: ... So stealing from the strong and giving the weak?");
     }
-
+    public void FA1S1Talk3()
+    {
+        ShowText("Scaethys: So glad we got the note about the shipment.");
+    }
+    public void FA1S1Talk4()
+    {
+        ShowText("Scaethys: Tomorrow we will start with doing great deeds .");
+    }
+    public void FA1S1Talk5()
+    {
+        ShowText("Radath: So everyone knows what to do?.");
+    }
+    public void FA1S1Talk6()
+    {
+        ShowText("Radath: We will just beat the hell out of them!");
+    }
+    public void FA1S1Talk7()
+    {
+        ShowText("Scaethys: And then get the precoius treasures they carry.");
+    }
+    public void FA1S1Talk8()
+    {
+        ShowText("Radath: So First take care of the guards.");
+    }
+    public void FA1S1Talk9()
+    {
+        ShowText("Scaethys: And then loot the chest.");
+    }
+    public void FA1S1Talk10()
+    {
+        ShowText("Radath: ... So You mean stealing from the strong and giving the weak?");
+    }
+    public void FA1S1Talk11()
+    {
+        ShowText("Scaethys: Lost Kingdom, here we come!");
+    }
+    public void FA1S1Talk12()
+    {
+        
+    }
+    public void FA1S1Talk13()
+    {
+       
+    }
+    public void FA1S1Talk14()
+    {
+        ChangeValue("A1S1Finished");
+    }
+    #endregion A1Sc1 ScriptSequence
     public void FA1S1Finished()
     {
         Debug.Log("Teleporting!!");
         GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(7, 0);
         Application.LoadLevel("A1Sc2_Road");
     }
+
+ 
 
     public void FA1S2_TalkRad()
     {
@@ -125,6 +186,7 @@ public class StoryManager : MonoBehaviour
                 {
                     MessageText.enabled = false;
                     audio.PlayOneShot(BipSound);
+                    GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetComponent<PlayerAttackingScript>()._inputTimer += 0.5f;
                 }
             }
         }
