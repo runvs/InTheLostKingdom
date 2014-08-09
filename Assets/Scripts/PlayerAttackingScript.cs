@@ -55,7 +55,7 @@ public class PlayerAttackingScript : MonoBehaviour
                         var enemyAttackingScript = enemy.transform.GetChild(0).GetComponent<EnemyAttackingScript>();
                         if (enemyAttackingScript != null)
                         {
-                            enemyAttackingScript._inputTimer += 1.5f;
+                            enemyAttackingScript._inputTimer += 0.5f;
                         }
                         else
                         { 

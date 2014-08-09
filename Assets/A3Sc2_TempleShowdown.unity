@@ -22661,6 +22661,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1128430969}
   m_RootOrder: 30
+--- !u!1 &624313147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 624313149}
+  - 114: {fileID: 624313148}
+  m_Layer: 0
+  m_Name: Story_Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &624313148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 624313147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2dab851747fcbc42997d1d42a94c1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreCondition: 
+  StoryVariable: A3S2_EnterMap
+  Once: 1
+  WaitTime: .100000001
+--- !u!4 &624313149
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 624313147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
 --- !u!1001 &628839703
 Prefab:
   m_ObjectHideFlags: 0

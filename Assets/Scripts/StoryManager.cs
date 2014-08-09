@@ -53,6 +53,7 @@ public class StoryManager : MonoBehaviour
     public bool Act3Finished = false;
 
     public bool A3S2Finished = false;
+    public bool A3S2_EnterMap = false;
     public bool A3S2_EnterTem = false;
     public bool A3S2_TemTalk1 = false;
     public bool A3S2_KilledSc = false;
@@ -201,6 +202,11 @@ public class StoryManager : MonoBehaviour
     }
 
     #endregion A2S2 Scripts
+
+    public void FA3S2_EnterMap()
+    {
+        ShowText("Radath: Finally We \ntracked down Scaethys.");
+    }
 
     public void FA3S2_EnterTem()
     {
