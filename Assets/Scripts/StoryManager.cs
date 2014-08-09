@@ -336,7 +336,7 @@ public class StoryManager : MonoBehaviour
         }
         MessageText.enabled = false;
 
-        MessageBackground = this.gameObject.GetComponent<GUITexture>();
+        MessageBackground = this.gameObject.transform.GetChild(0).GetComponent<GUITexture>();
         if (MessageBackground == null)
         {
             Debug.Log("Cannot find GUITexture for Messages");
@@ -375,7 +375,7 @@ public class StoryManager : MonoBehaviour
             {
                 if (TextMessagePresent)
                 {
-                    MessageText.enabled = false;
+                    HideText();
                     audio.PlayOneShot(BipSound);
                     GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetComponent<PlayerAttackingScript>()._inputTimer += 0.5f;
                 }
@@ -385,6 +385,7 @@ public class StoryManager : MonoBehaviour
 
     public void ShowText(string text)
     {
+
         MessageBackground.enabled = true;
 
         MessageText.text = text;

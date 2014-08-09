@@ -16,6 +16,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/A1Sc1_ThievesCamp.unity
   - enabled: 1
+    path: Assets/A2Sc1_ThievesCamp.unity
+  - enabled: 1
     path: Assets/A2Sc2_ForestHut.unity
   - enabled: 1
     path: Assets/A3Sc2_TempleShowdown.unity
