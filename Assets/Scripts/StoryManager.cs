@@ -35,7 +35,19 @@ public class StoryManager : MonoBehaviour
 
     public bool A1S3Finished = false;
 
+    
     public bool Act2Finished = false;
+    
+    public bool A2S2Fininished = false;
+    public bool A2S2_FoundHut = false;
+    public bool A2S2_Talk1 = false;
+    public bool A2S2_Talk2 = false;
+    public bool A2S2_Talk3 = false;
+    public bool A2S2_Talk4 = false;
+    public bool A2S2_Talk5 = false;
+    public bool A2S2_Talk6 = false;
+    public bool A2S2_Talk7 = false;
+    public bool A2S2_Talk8 = false;
 
 
     public bool Act3Finished = false;
@@ -52,35 +64,35 @@ public class StoryManager : MonoBehaviour
     #region A1Sc1 ScriptSequence
     public void FA1S1Talk1()
     {
-        ShowText("Scaethys: ... in the Lost Kingdom i would be some kind of Robin Hood.");
+        ShowText("Scaethys: ... in the Lost Kingdom i \nwould be some kind of Robin Hood.");
     }
     public void FA1S1Talk2()
     {
-        ShowText("Radath: ... So stealing from the strong and giving the weak?");
+        ShowText("Radath: ... So stealing from \nthe strong and giving the weak?");
     }
     public void FA1S1Talk3()
     {
-        ShowText("Scaethys: So glad we got the note about the shipment.");
+        ShowText("Scaethys: So glad we got the note about \nthe shipment.");
     }
     public void FA1S1Talk4()
     {
-        ShowText("Scaethys: Tomorrow we will start with doing great deeds .");
+        ShowText("Scaethys: Tomorrow we will start with \ndoing great deeds .");
     }
     public void FA1S1Talk5()
     {
-        ShowText("Radath: So everyone knows what to do?.");
+        ShowText("Radath: So everyone knows what to do?");
     }
     public void FA1S1Talk6()
     {
-        ShowText("Radath: We will just beat the hell out of them!");
+        ShowText("Radath: We will just beat the hell \nout of them!");
     }
     public void FA1S1Talk7()
     {
-        ShowText("Scaethys: And then get the precoius treasures they carry.");
+        ShowText("Scaethys: And then get the precoius \ntreasures they carry.");
     }
     public void FA1S1Talk8()
     {
-        ShowText("Radath: So First take care of the guards.");
+        ShowText("Radath: So First take care\n of the guards.");
     }
     public void FA1S1Talk9()
     {
@@ -88,7 +100,6 @@ public class StoryManager : MonoBehaviour
     }
     public void FA1S1Talk10()
     {
-        ShowText("Radath: ... So You mean stealing from the strong and giving the weak?");
     }
     public void FA1S1Talk11()
     {
@@ -132,16 +143,64 @@ public class StoryManager : MonoBehaviour
 
     public void FA1S2_TookRing()
     {
-        ShowText("Scaethys: Wow, that amulett is precious.");
+        ShowText("Scaethys: Wow, that amulett \mis precious.");
     }
     #endregion A1Sc2 Scripts
     public void FA1S2Finished()
     {
         
         Debug.Log("Teleporting!!");
+        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(-2, -3);
+        Application.LoadLevel("A2Sc2_ForestHut");
+    }
+
+    #region A2S2 Scripts
+    public void FA2S2_FoundHut()
+    {
+        // TODO make clairvoyant appear
+    }
+    public void FA2S2_Talk1 ()
+    {
+        ShowText("Radath: I cannot move! Help me!");
+    }
+    public void FA2S2_Talk2()
+    {
+        ShowText("Clairvoyant: Whahahahaha! So i \nexpected you.");
+        
+    }
+    public void FA2S2_Talk3()
+    {
+        ShowText("Clairvoyant: You are responsible \nfor your actions.");
+    }
+    public void FA2S2_Talk4()
+    {
+        ShowText("Clairvoyant: The Amulet you took was \nment sacrifice for the maleficent God Elion.");
+    }
+    public void FA2S2_Talk5()
+    {
+        ShowText("Clairvoyant: You must complete \nthe sacrifice to end our misery.");
+    }
+    public void FA2S2_Talk6()
+    {
+        ShowText("Radath: By the lost kingdom,\nwhat have we done?");
+    }
+    public void FA2S2_Talk7()
+    {
+        ShowText("Clairvoyant: Do a heck of a job! \nEveryone counts on you!");
+    }
+    public void FA2S2_Talk8()
+    {
+        //ChangeValue("A2S2Fininished");
+    }
+
+    public void FA2S2Fininished()
+    {
+        Debug.Log("Teleporting!!");
         GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(-1, -12);
         Application.LoadLevel("A3Sc2_TempleShowdown");
     }
+
+    #endregion A2S2 Scripts
 
     public void FA3S2_EnterTem()
     {
