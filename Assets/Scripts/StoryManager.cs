@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Reflection;
 
-public class StoryManager : MonoBehaviour 
+public class StoryManager : MonoBehaviour
 {
 
     private float _deadTimer;
@@ -35,7 +33,7 @@ public class StoryManager : MonoBehaviour
 
     public bool A1S3Finished = false;
 
-    
+
     public bool Act2Finished = false;
 
     public bool A2S1Finished = false;
@@ -122,11 +120,11 @@ public class StoryManager : MonoBehaviour
     }
     public void FA1S1Talk12()
     {
-        
+
     }
     public void FA1S1Talk13()
     {
-       
+
     }
     public void FA1S1Talk14()
     {
@@ -140,7 +138,7 @@ public class StoryManager : MonoBehaviour
         Application.LoadLevel("A1Sc2_Road");
     }
 
- 
+
     #region A1Sc2 Scripts
     public void FA1S2_TalkRad()
     {
@@ -163,7 +161,7 @@ public class StoryManager : MonoBehaviour
     #endregion A1Sc2 Scripts
     public void FA1S2Finished()
     {
-        
+
         Debug.Log("Teleporting!!");
         GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(6, 2);
         Application.LoadLevel("A2Sc1_ThievesCamp");
@@ -231,14 +229,14 @@ public class StoryManager : MonoBehaviour
     {
         // TODO make clairvoyant appear
     }
-    public void FA2S2_Talk1 ()
+    public void FA2S2_Talk1()
     {
         ShowText("Radath: I cannot move! Help me!");
     }
     public void FA2S2_Talk2()
     {
         ShowText("Clairvoyant: Whahahahaha! So i \nexpected you.");
-        
+
     }
     public void FA2S2_Talk3()
     {
@@ -324,27 +322,36 @@ public class StoryManager : MonoBehaviour
     [HideInInspector]
     public bool TextMessagePresent;
     GUIText MessageText;
+    GUITexture MessageBackground;
 
-	// Use this for initialization
-	void Start () 
+    // Use this for initialization
+    void Start()
     {
         DontDestroyOnLoad(gameObject);
         TextMessagePresent = false;
         MessageText = this.gameObject.GetComponent<GUIText>();
-        if(MessageText == null)
+        if (MessageText == null)
         {
             Debug.Log("Cannot find GuiText for Messages");
         }
         MessageText.enabled = false;
+
+        MessageBackground = this.gameObject.GetComponent<GUITexture>();
+        if (MessageBackground == null)
+        {
+            Debug.Log("Cannot find GUITexture for Messages");
+        }
+        MessageBackground.enabled = false;
+
         _deadTimer = -1.0f;
-	}
+    }
 
     public void ChangeValue(string str)
     {
         //Debug.Log("Change Property " + str + " from " + GetType().GetField(str).GetValue(this) + " to True");
         this.GetType().GetField(str).SetValue(this, true);
         //Debug.Log("Calling Function " + "F" + str);
-        this.GetType().GetMethod("F"+str).Invoke(this, null);
+        this.GetType().GetMethod("F" + str).Invoke(this, null);
     }
 
     public bool GetValue(string str)
@@ -353,9 +360,9 @@ public class StoryManager : MonoBehaviour
     }
 
 
-	
-	// Update is called once per frame
-	void Update () 
+
+    // Update is called once per frame
+    void Update()
     {
         TextMessagePresent = MessageText.enabled;
         if (_deadTimer > 0)
@@ -374,10 +381,12 @@ public class StoryManager : MonoBehaviour
                 }
             }
         }
-	}
+    }
 
-    public void ShowText (string text)
+    public void ShowText(string text)
     {
+        MessageBackground.enabled = true;
+
         MessageText.text = text;
         MessageText.enabled = true;
         _deadTimer = 0.650f;
@@ -387,5 +396,6 @@ public class StoryManager : MonoBehaviour
     public void HideText()
     {
         MessageText.enabled = false;
+        MessageBackground.enabled = false;
     }
 }
