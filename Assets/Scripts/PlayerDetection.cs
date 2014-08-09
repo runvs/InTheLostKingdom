@@ -10,14 +10,14 @@ public class PlayerDetection : MonoBehaviour
         {
             if (!GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StoryManager>().TextMessagePresent)
             {
-                Vector3  vector = (_player.transform.position - this.transform.parent.parent.position).normalized;
-                var angle = Mathf.Atan(vector.y / vector.x) + ((Mathf.Sign(vector.x) < 0) ? Mathf.PI : 0);
+                Vector3  vector = (_player.transform.position - this.transform.parent.parent.position);
+                var angle = Mathf.Atan(vector.y / vector.x) + ((Mathf.Sign(vector.x) < 0) ? Mathf.PI : 0);  // calc angle by atan, note confinement of atan to [-90,90]
+                // just in case, bend back angle to [0,360]
                 while(angle>2.0*Mathf.PI)
                 {
                     angle -= 2.0f * Mathf.PI;
                 }
                 var movementController = this.transform.parent.parent.GetComponent<MovementController>();
-
                 
                 if (angle >= 1.0 / 4.0 * Mathf.PI && angle < 3.0 / 4.0 * Mathf.PI)
                 {
