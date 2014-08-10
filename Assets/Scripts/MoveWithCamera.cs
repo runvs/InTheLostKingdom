@@ -6,11 +6,19 @@ public class MoveWithCamera : MonoBehaviour
 
     void Start()
     {
-        _cameraObject = GameObject.FindGameObjectWithTag("MainCamera");
+        
     }
 
     void Update()
     {
-        this.transform.position = new Vector3(_cameraObject.transform.position.x, _cameraObject.transform.position.y, 0);
+        _cameraObject = GameObject.FindGameObjectWithTag("MainCamera");
+        if (_cameraObject != null)
+        {
+            this.transform.position = new Vector3(_cameraObject.transform.position.x, _cameraObject.transform.position.y, 0);
+        }
+        else
+        {
+            Debug.Log("Warning, camera not accessible.");
+        }
     }
 }
