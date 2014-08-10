@@ -3075,7 +3075,7 @@ GameObject:
   - 212: {fileID: 350905891}
   m_Layer: 9
   m_Name: scaethys
-  m_TagString: Entities
+  m_TagString: npc1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5520,7 +5520,7 @@ GameObject:
   - 212: {fileID: 567550221}
   m_Layer: 9
   m_Name: radath
-  m_TagString: Entities
+  m_TagString: npc2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

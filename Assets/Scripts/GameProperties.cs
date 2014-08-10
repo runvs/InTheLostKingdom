@@ -14,4 +14,6 @@ public static class GameProperties
     public static float EnemyMoveForce { get { return 150f; } }
 
     public static float EnemyMaxHealth { get { return 5f; } }
+
+    public static float JumpTime { get { return 0.20f; } }
 }

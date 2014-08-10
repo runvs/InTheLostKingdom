@@ -12783,6 +12783,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &453873963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15045,7 +15046,7 @@ GameObject:
   - 61: {fileID: 514092388}
   m_Layer: 9
   m_Name: radath
-  m_TagString: Entities
+  m_TagString: npc2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17506,6 +17507,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &591217105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18555,6 +18557,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &615740742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34505,6 +34508,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &1127601848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35132,6 +35136,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &1146384105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37114,7 +37119,7 @@ GameObject:
   - 61: {fileID: 1230335013}
   m_Layer: 9
   m_Name: scaethys
-  m_TagString: Entities
+  m_TagString: npc1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40490,6 +40495,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &1330930722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57125,6 +57131,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &1871129239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65201,6 +65208,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &2108124787
 MonoBehaviour:
   m_ObjectHideFlags: 0

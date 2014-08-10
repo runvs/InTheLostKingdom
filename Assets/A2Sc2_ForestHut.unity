@@ -9928,6 +9928,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &230430208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16849,6 +16850,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &400000743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18313,6 +18315,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &439997885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21015,7 +21018,7 @@ GameObject:
   - 61: {fileID: 503539739}
   m_Layer: 9
   m_Name: radath
-  m_TagString: Entities
+  m_TagString: npc2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21445,6 +21448,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &509098369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23723,6 +23727,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &580191281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33812,6 +33817,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &806882307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50707,6 +50713,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &1237453547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72009,6 +72016,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &1731100814
 MonoBehaviour:
   m_ObjectHideFlags: 0
