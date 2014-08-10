@@ -5203,6 +5203,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &94256856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12094,6 +12095,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &220268332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13807,6 +13809,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &250489907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21436,6 +21439,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &400587675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26272,7 +26276,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6c8e60244d5b5b94495dc04aa61e7684, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 24.0946636
+      value: 23.0946636
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6c8e60244d5b5b94495dc04aa61e7684, type: 2}
       propertyPath: m_LocalPosition.z
@@ -37101,7 +37105,7 @@ Transform:
   m_PrefabInternal: {fileID: 939389068}
   m_GameObject: {fileID: 695124979}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.81247211, y: 24.0946636, z: 2.43945312}
+  m_LocalPosition: {x: -2.81247211, y: 23.0946636, z: 2.43945312}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 1128430969}
@@ -40370,7 +40374,7 @@ Transform:
   m_PrefabInternal: {fileID: 497351876}
   m_GameObject: {fileID: 752853940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .187527895, y: 24.0946636, z: 2.43945312}
+  m_LocalPosition: {x: .187527895, y: 23.0946636, z: 2.43945312}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 1128430969}
@@ -43191,6 +43195,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &822337181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48760,7 +48765,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6c8e60244d5b5b94495dc04aa61e7684, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 24.0946636
+      value: 23.0946636
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6c8e60244d5b5b94495dc04aa61e7684, type: 2}
       propertyPath: m_LocalPosition.z
@@ -50577,6 +50582,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &972346898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71029,6 +71035,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: 929d848ad15eef0459a396fcef37e594, type: 3}
   _upSprite: {fileID: 21300002, guid: 929d848ad15eef0459a396fcef37e594, type: 3}
   _downSprite: {fileID: 21300004, guid: 929d848ad15eef0459a396fcef37e594, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &1346717066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71586,6 +71593,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &1357237902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101593,6 +101601,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &1950118515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107324,6 +107333,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &2058569006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107702,6 +107712,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &2062555527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110268,6 +110279,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _upSprite: {fileID: 21300004, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
   _downSprite: {fileID: 21300002, guid: ed8bde9d52e51ac4da1b073b4ee163b8, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &2120244232
 MonoBehaviour:
   m_ObjectHideFlags: 0

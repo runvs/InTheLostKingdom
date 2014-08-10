@@ -182,6 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29de4db2bb9639f4e8b1c90673621b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inputTimer: 0
   AttackSound: {fileID: 8300000, guid: c7e90f8d14ac1fd4dac902dc0d0ee395, type: 3}
   HitSound: {fileID: 8300000, guid: 5354ed9658f6eef4aaf9722b1cc86c46, type: 3}
 --- !u!114 &11400004
@@ -200,6 +201,7 @@ MonoBehaviour:
   _rightSprite: {fileID: 21300006, guid: aabf6b8c1badfcc4c9f85da81c8eccd9, type: 3}
   _upSprite: {fileID: 21300004, guid: aabf6b8c1badfcc4c9f85da81c8eccd9, type: 3}
   _downSprite: {fileID: 21300002, guid: aabf6b8c1badfcc4c9f85da81c8eccd9, type: 3}
+  WalkDust: {fileID: 100000, guid: 9257c3c57f13a09429af3ddaf02a90f1, type: 2}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
