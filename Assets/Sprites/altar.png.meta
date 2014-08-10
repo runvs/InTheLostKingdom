@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: c10337a49d9d09445bbce49cabcb12bc
-=======
-guid: 0eac22086f228d545a95930f7454dc69
->>>>>>> 1ab6d056323b2322572b1b6274a3fc5bfd0010f8
 TextureImporter:
   fileIDToRecycleName:
     21300000: altar
@@ -29,11 +25,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 1024
   textureSettings:
-<<<<<<< HEAD
     filterMode: 0
-=======
-    filterMode: -1
->>>>>>> 1ab6d056323b2322572b1b6274a3fc5bfd0010f8
     aniso: -1
     mipBias: -1
     wrapMode: -1
@@ -46,11 +38,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-<<<<<<< HEAD
   spritePixelsToUnits: 16
-=======
-  spritePixelsToUnits: 100
->>>>>>> 1ab6d056323b2322572b1b6274a3fc5bfd0010f8
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []

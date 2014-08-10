@@ -222,7 +222,7 @@ public class StoryManager : MonoBehaviour
     }
     public void FA2S1Talk7()
     {
-        ShowText("Scaethys: And you two will \nperformthe next job.");
+        ShowText("Scaethys: And you two will \nperform the next job.");
         MoveNPC("npc1");
     }
     public void FA2S1Talk8()

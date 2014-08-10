@@ -39501,7 +39501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PreCondition: 
   StoryVariable: A1S2_TalkRad
-  Once: 1
+  Once: 0
 --- !u!61 &1310111167
 BoxCollider2D:
   m_ObjectHideFlags: 0
