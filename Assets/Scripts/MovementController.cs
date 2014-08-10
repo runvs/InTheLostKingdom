@@ -40,7 +40,7 @@ public class MovementController : MonoBehaviour
     {
         if (this.tag == "Player")
         {
-            if (!GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StoryManager>().TextMessagePresent)
+            if (GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StoryManager>().PlayerCanMove())
             {
                 if (Input.GetAxis("Horizontal") > 0)
                 {

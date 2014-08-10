@@ -8,7 +8,7 @@ public class PlayerDetection : MonoBehaviour
     {
         if (_player != null)
         {
-            if (!GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StoryManager>().TextMessagePresent)
+            if (GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StoryManager>().PlayerCanMove())
             {
                 Vector3  vector = (_player.transform.position - this.transform.parent.parent.position);
                 var angle = Mathf.Atan(vector.y / vector.x) + ((Mathf.Sign(vector.x) < 0) ? Mathf.PI : 0);  // calc angle by atan, note confinement of atan to [-90,90]

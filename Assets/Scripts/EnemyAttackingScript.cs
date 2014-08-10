@@ -11,7 +11,7 @@ public class EnemyAttackingScript : MonoBehaviour
     {
         if (_inputTimer <= 0.0f)
         {
-            if (!GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StoryManager>().TextMessagePresent)
+            if (GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StoryManager>().PlayerCanMove())
             {
                 _inputTimer += GameProperties.BaseInputTimer * 4.0f;
             }

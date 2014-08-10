@@ -79,6 +79,7 @@ public class StoryManager : MonoBehaviour
     #region A1Sc1 ScriptSequence
     public void FA1S1Talk1()
     {
+        DisablePlayerMovement();
         ShowText("Scaethys: ... in the Lost Kingdom i \nwould be some kind of Robin Hood.");
     }
     public void FA1S1Talk2()
@@ -130,13 +131,14 @@ public class StoryManager : MonoBehaviour
     }
     public void FA1S1Talk14()
     {
+        EnablePlayerMovement();
         ChangeValue("A1S1Finished");
     }
     #endregion A1Sc1 ScriptSequence
     public void FA1S1Finished()
     {
         Debug.Log("Teleporting!!");
-        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(7, 0);
+        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(13, 1);
         Application.LoadLevel("A1Sc2_Road");
     }
 
@@ -144,6 +146,7 @@ public class StoryManager : MonoBehaviour
     #region A1Sc2 Scripts
     public void FA1S2_TalkRad()
     {
+        
         ShowText("Radath: To hit an enemy, \njust press ctrl!");
     }
 
@@ -172,6 +175,7 @@ public class StoryManager : MonoBehaviour
     #region A2S1 ScriptSequence
     public void FA2S1Talk1()
     {
+        DisablePlayerMovement();
         ShowText("Scaethys: Finally we managed\nto get at least one job done!");
     }
     public void FA2S1Talk2()
@@ -180,7 +184,7 @@ public class StoryManager : MonoBehaviour
     }
     public void FA2S1Talk3()
     {
-        ShowText("Radath (whispers): \nFor two days? No longer!");
+        ShowText("Radath whispers: \nFor two days? No longer!");
     }
     public void FA2S1Talk4()
     {
@@ -204,11 +208,13 @@ public class StoryManager : MonoBehaviour
     }
     public void FA2S1Talk9()
     {
-        ShowText("Radath (whispers): No good deeds to expect from you.");
+        ShowText("Radath whispers: No good deeds to \nexpect from you.");
     }
     public void FA2S1Talk10()
     {
+        EnablePlayerMovement();
         ShowText("Scaethys: Shut up and eat!");
+        GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().Health = GameProperties.PlayerMaxHealth;
     }
     public void FA2S1Talk11()
     {
@@ -237,11 +243,13 @@ public class StoryManager : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("finalboss").GetComponent<SpriteRenderer>().enabled = true;
         GameObject.FindGameObjectWithTag("finalboss").transform.GetChild(0).GetComponent<ParticleSystem>().Play();
+        GameObject.FindGameObjectWithTag("ScreenEffects").GetComponent<ScreenEffects>().ShakeScreen(0.5f, .50f);
         audio.PlayOneShot(MagicEffectSound);
     }
 
     public void FA2S2_Talk1()
     {
+        DisablePlayerMovement();
         ShowText("Radath: I cannot move! Help me!");
     }
     public void FA2S2_Talk2()
@@ -276,6 +284,7 @@ public class StoryManager : MonoBehaviour
 
     public void FA2S2Fininished()
     {
+        EnablePlayerMovement();
         Debug.Log("Teleporting!!");
         GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(-1, -12);
         Application.LoadLevel("A3Sc2_TempleShowdown");
@@ -294,7 +303,7 @@ public class StoryManager : MonoBehaviour
     }
     public void FA3S2_TemTalk1()
     {
-        ShowText("Scaethys: You will not hand over the amulet.");
+        ShowText("Scaethys: I will not hand over the amulet.");
     }
 
     public void FA3S2_KilledSc()
@@ -338,6 +347,7 @@ public class StoryManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        _playerCanMove = true;
         DontDestroyOnLoad(gameObject);
         TextMessagePresent = false;
         MessageText = this.gameObject.GetComponent<GUIText>();
@@ -410,4 +420,27 @@ public class StoryManager : MonoBehaviour
         MessageText.enabled = false;
         MessageBackground.enabled = false;
     }
+
+    private bool _playerCanMove;
+
+    public void DisablePlayerMovement()
+    {
+        _playerCanMove = false;
+    }
+
+    public void EnablePlayerMovement()
+    {
+        _playerCanMove = true;
+    }
+
+
+    public bool PlayerCanMove ()
+    {
+        if (TextMessagePresent)
+        {
+            return false;
+        }
+        return _playerCanMove;
+    }
+
 }
