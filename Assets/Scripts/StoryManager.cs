@@ -70,6 +70,9 @@ public class StoryManager : MonoBehaviour
     public bool A3S2_EnterMap = false;
     public bool A3S2_EnterTem = false;
     public bool A3S2_TemTalk1 = false;
+    public bool A3S2_TemTalk2 = false;
+    public bool A3S2_Chest1 = false;
+    public bool A3S2_Chest2 = false;
     public bool A3S2_KilledSc = false;
     public bool A3S2_FinTalk1 = false;
     public bool A3S2_FinTalk2 = false;
@@ -299,29 +302,61 @@ public class StoryManager : MonoBehaviour
 
     public void FA3S2_EnterTem()
     {
+        // destroy all normal enemies
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("Enemies");
+        foreach (var e in objs)
+        {
+            if (e.name.Equals("enemy"))
+            {
+                Destroy(e);
+            }
+                // give scaethys more health
+            else if (e.name.Equals("scaethys"))
+            {
+                e.GetComponent<HealthController>().Health = 10;
+            }
+        }
+        /// voice evil laughter
         ShowText("Scaethys: I have expected you.");
     }
     public void FA3S2_TemTalk1()
     {
         ShowText("Scaethys: I will not hand over the amulet.");
     }
+    public void FA3S2_TemTalk2()
+    {
+        ShowText("Radath whispers: Check the chests\n for health.");
+    }
+
+    public void FA3S2_Chest1()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().Health = GameProperties.PlayerMaxHealth;
+        ShowText("You open the chest and find \na health potion.");
+    }
+    public void FA3S2_Chest2()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().Health = GameProperties.PlayerMaxHealth;
+        ShowText("You open the chest and find \na health potion.");
+        
+    }
+
 
     public void FA3S2_KilledSc()
     {
-
+        ShowText("Scaethys: You have defeated me.");
     }
 
     public void FA3S2_FinTalk1()
     {
-
+        ShowText("You take the Amulett and place \nit on the altar.");
     }
     public void FA3S2_FinTalk2()
     {
-
+        ShowText("The Temple starts to glow from the \ninside and you feel a great relief");
     }
     public void FA3S2_FinTalk3()
     {
-
+        ShowText("You have completed you Quest \nfor the lost kingdom!");
     }
     public void FA3S2_FinTalk4()
     {
@@ -336,6 +371,7 @@ public class StoryManager : MonoBehaviour
     public void FAct3Finished()
     {
         // Finish Game, switch to credits or menu
+        GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().ResetGame();
     }
 
 

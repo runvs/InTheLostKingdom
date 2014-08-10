@@ -96,7 +96,7 @@ public class HealthController : MonoBehaviour
         _hearts["Health_" + heartNumber].GetComponent<GUITexture>().texture = isFull ? HeartFullTexture : HeartEmptyTexture;
     }
 
-    private void ResetGame()
+    public void ResetGame()
     {
         foreach (var heart in _hearts)
         {
@@ -104,6 +104,7 @@ public class HealthController : MonoBehaviour
         }
 
         Destroy(GameObject.FindGameObjectWithTag("MainCamera"));
+        Destroy(GameObject.FindGameObjectWithTag("bgm"));
 
         Application.LoadLevel("Menu");
     }

@@ -255,6 +255,9 @@ MonoBehaviour:
   A3S2_EnterMap: 0
   A3S2_EnterTem: 0
   A3S2_TemTalk1: 0
+  A3S2_TemTalk2: 0
+  A3S2_Chest1: 0
+  A3S2_Chest2: 0
   A3S2_KilledSc: 0
   A3S2_FinTalk1: 0
   A3S2_FinTalk2: 0
