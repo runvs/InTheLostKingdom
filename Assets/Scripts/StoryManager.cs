@@ -91,22 +91,22 @@ public class StoryManager : MonoBehaviour
     public void FA1S1Talk1()
     {
         DisablePlayerMovement();
-        ShowText("Scaethys: ... in the Lost Kingdom i \nwould be some kind of Robin Hood.");
+        ShowText("Scaethys: In the Lost Kingdom I \nwould be some kind of Robin Hood.");
         MoveNPC("npc1");
     }
     public void FA1S1Talk2()
     {
-        ShowText("Radath: ... So stealing from \nthe strong and giving the weak?");
+        ShowText("Radath: So you'd steal from \nthe rich and give to the weak?");
         MoveNPC("npc2");
     }
     public void FA1S1Talk3()
     {
-        ShowText("Scaethys: So glad we got the note about \nthe shipment.");
+        ShowText("Scaethys: I'm so glad we got the note about \nthe shipment.");
         MoveNPC("npc1");
     }
     public void FA1S1Talk4()
     {
-        ShowText("Scaethys: Tomorrow we will start with \ndoing great deeds .");
+        ShowText("Scaethys: Tomorrow we will start \ndoing great feats.");
         MoveNPC("npc1");
     }
     public void FA1S1Talk5()
@@ -126,7 +126,7 @@ public class StoryManager : MonoBehaviour
     }
     public void FA1S1Talk8()
     {
-        ShowText("Radath: So First take care\n of the guards.");
+        ShowText("Radath: First take care\n of the guards.");
         MoveNPC("npc2");
     }
     public void FA1S1Talk9()
@@ -168,23 +168,23 @@ public class StoryManager : MonoBehaviour
     public void FA1S2_TalkRad()
     {
 
-        ShowText("Radath: To hit an enemy, \njust press ctrl!");
+        ShowText("Radath: To hit an enemy,\njust press CTRL!");
         MoveNPC("npc2");
     }
 
     public void FA1S2_TalkSca()
     {
-        ShowText("Scaethys: You should try to \nevade their hits!");
+        ShowText("Scaethys: You should try to\nevade their hits!");
         MoveNPC("npc1");
     }
     public void FA1S2_KilledE()
     {
-        ShowText("Scaethys: Great! Loot the Chest!");
+        ShowText("Scaethys: Great! Open the chest!");
     }
 
     public void FA1S2_TookRing()
     {
-        ShowText("Scaethys: Wow, that amulett \nis precious. I will take it.");
+        ShowText("Scaethys: This amulet looks\nprecious! I will keep it safe.");
     }
     #endregion A1Sc2 Scripts
     public void FA1S2Finished()
@@ -204,32 +204,32 @@ public class StoryManager : MonoBehaviour
     }
     public void FA2S1Talk2()
     {
-        ShowText("Scaethys: An with the prey\nwe can now live like kings!");
+        ShowText("Scaethys: With the loot\nwe can now live like kings!");
         MoveNPC("npc1");
     }
     public void FA2S1Talk3()
     {
-        ShowText("Radath whispers: \nFor two days? No longer!");
+        ShowText("Radath whispers: For two\ndays maybe. Not longer!");
         MoveNPC("npc2");
     }
     public void FA2S1Talk4()
     {
-        ShowText("Scaethys: You, don't grumble.\nWith my plan i got us real food!");
+        ShowText("Scaethys: Don't complain.\nWith my plan I got us real food!");
         MoveNPC("npc1");
     }
     public void FA2S1Talk5()
     {
-        ShowText("Radath: Yeah Scaethys, you are right!");
+        ShowText("Radath: You are right, Scaethys!");
         MoveNPC("npc2");
     }
     public void FA2S1Talk6()
     {
-        ShowText("Scaethys: Tomorrow I will \nkeep ... erm sell this amulett...");
+        ShowText("Scaethys: Tomorrow I will\nkeep - umm - sell this amulet.");
         MoveNPC("npc1");
     }
     public void FA2S1Talk7()
     {
-        ShowText("Scaethys: And you two will \nperform the next job.");
+        ShowText("Scaethys: You two will\nperform the next job.");
         MoveNPC("npc1");
     }
     public void FA2S1Talk8()
@@ -239,7 +239,7 @@ public class StoryManager : MonoBehaviour
     }
     public void FA2S1Talk9()
     {
-        ShowText("Radath whispers: No good deeds to \nexpect from you.");
+        ShowText("Radath whispers: No good deeds to\nexpect from you.");
         MoveNPC("npc2");
     }
     public void FA2S1Talk10()
@@ -269,7 +269,7 @@ public class StoryManager : MonoBehaviour
 
     public void FA2S2_RadTalk()
     {
-        ShowText("Radath: Ok, lets do this!\nThough Scaethys behavevd strange.");
+        ShowText("Radath: Let's do this!\nThough Scaethys behaved strange.");
         MoveNPC("npc2");
     }
 
@@ -284,36 +284,36 @@ public class StoryManager : MonoBehaviour
     public void FA2S2_Talk1()
     {
         DisablePlayerMovement();
-        ShowText("Radath: I cannot move! Help me!");
+        ShowText("Radath: I can't move! Help me!");
     }
     public void FA2S2_Talk2()
     {
-        ShowText("Clairvoyant: Whahahahaha! So i \nexpected you.");
+        ShowText("Clairvoyant: Mwahahahaha! I\nexpected you.");
         MoveNPC("finalboss");
 
     }
     public void FA2S2_Talk3()
     {
-        ShowText("Clairvoyant: You are responsible \nfor your actions.");
+        ShowText("Clairvoyant: I hold you responsible\nfor your actions.");
         MoveNPC("finalboss");
     }
     public void FA2S2_Talk4()
     {
-        ShowText("Clairvoyant: The Amulet you took was a \nsacrifice for the maleficent God Elion.");
+        ShowText("Clairvoyant: The amulet you took was a sacrifice\nfor the vicious god Elion.");
         MoveNPC("finalboss");
     }
     public void FA2S2_Talk5()
     {
-        ShowText("Clairvoyant: You must complete \nthe sacrifice to end our misery.");
+        ShowText("Clairvoyant: You must complete\nthe sacrifice to end our misery.");
         MoveNPC("finalboss");
     }
     public void FA2S2_Talk6()
     {
-        ShowText("Radath: By the lost kingdom,\nwhat have we done?");
+        ShowText("Radath: By the Lost Kingdom,\nwhat have we done?");
     }
     public void FA2S2_Talk7()
     {
-        ShowText("Clairvoyant: Do a heck of a job! \nEveryone counts on you!");
+        ShowText("Clairvoyant: Do your best!\nEveryone counts on you!");
         MoveNPC("finalboss");
     }
     public void FA2S2_Talk8()
@@ -392,15 +392,15 @@ public class StoryManager : MonoBehaviour
 
     public void FA3S2_FinTalk1()
     {
-        ShowText("You take the Amulett and place \nit on the altar.");
+        ShowText("You take the amulet and place\nit on the altar.");
     }
     public void FA3S2_FinTalk2()
     {
-        ShowText("The Temple starts to glow from the \ninside and you feel a great relief");
+        ShowText("The temple starts to glow from the\ninside and you feel a great relief.");
     }
     public void FA3S2_FinTalk3()
     {
-        ShowText("You have completed you Quest \nfor the lost kingdom!");
+        ShowText("You have completed you quest\nfor the Lost Kingdom!");
     }
     public void FA3S2_FinTalk4()
     {
