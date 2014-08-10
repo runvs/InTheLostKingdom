@@ -2,31 +2,40 @@
 
 public class TeleporterScript : MonoBehaviour
 {
-
     public string TargetLevelName;
-
     public Vector2 TargetPosition;
+    private SimpleAnimator _animator;
+    private bool _isActive;
+    private float _remainingTimeUntilTeleport = 0.0f;
 
-    private bool isActive;
-
-    private float remainingTimeUntilTeleport;
-
-
-    // Use this for initialization
     void Start()
     {
-        isActive = false;// for later
+        _isActive = false;
+
+        // Find animator
+        var hudObjects = GameObject.FindGameObjectsWithTag("Hud");
+        foreach (var hudObject in hudObjects)
+        {
+            if (hudObject.name == "Transition")
+            {
+                _animator = hudObject.GetComponent<SimpleAnimator>();
+                _remainingTimeUntilTeleport = (_animator.TimePerFrame / 1000) * _animator.Sprites.Length;
+                break;
+            }
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (isActive)
+        if (_isActive)
         {
-            remainingTimeUntilTeleport -= Time.deltaTime;
-            if (remainingTimeUntilTeleport <= 0)
+            if (_remainingTimeUntilTeleport <= 0.0f)
             {
                 Teleport();
+            }
+            else
+            {
+                _remainingTimeUntilTeleport -= Time.deltaTime;
             }
         }
     }
@@ -51,8 +60,8 @@ public class TeleporterScript : MonoBehaviour
 
     private void StartFade()
     {
-        // TODO Fade Stuff
-        isActive = true;
+        _isActive = true;
+        _animator.RunAnimationOnce();
     }
 
 
@@ -60,9 +69,7 @@ public class TeleporterScript : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player")
         {
-            isActive = true;
+            _isActive = true;
         }
-
     }
-
 }
