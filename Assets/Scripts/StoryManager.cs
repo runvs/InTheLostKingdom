@@ -496,7 +496,7 @@ public class StoryManager : MonoBehaviour
 
         if (_isInTeleportPreparation)
         {
-            Debug.Log(_timetilTeleport);
+            //Debug.Log(_timetilTeleport);
             _timetilTeleport -= Time.deltaTime;
             if (_timetilTeleport <= 0)
             {

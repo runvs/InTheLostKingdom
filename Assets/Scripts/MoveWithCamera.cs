@@ -2,7 +2,7 @@
 
 public class MoveWithCamera : MonoBehaviour
 {
-    private GameObject _cameraObject;
+    public GameObject _cameraObject;
 
     void Start()
     {
@@ -12,9 +12,12 @@ public class MoveWithCamera : MonoBehaviour
     void Update()
     {
         _cameraObject = GameObject.FindGameObjectWithTag("MainCamera");
+        this.transform.position = new Vector3(_cameraObject.transform.position.x, _cameraObject.transform.position.y, 0);
+        Debug.Log(_cameraObject.transform.position.x);
         if (_cameraObject != null)
         {
-            this.transform.position = new Vector3(_cameraObject.transform.position.x, _cameraObject.transform.position.y, 0);
+            
+            Debug.Log(this.transform.position);
         }
         else
         {
