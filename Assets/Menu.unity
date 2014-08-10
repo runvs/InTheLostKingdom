@@ -252,6 +252,7 @@ MonoBehaviour:
   A2S2_Talk8: 0
   Act3Finished: 0
   A3S2Finished: 0
+  A3S2_TalkRad: 0
   A3S2_EnterMap: 0
   A3S2_EnterTem: 0
   A3S2_TemTalk1: 0

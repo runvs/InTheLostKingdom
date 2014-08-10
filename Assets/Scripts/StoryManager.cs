@@ -67,6 +67,7 @@ public class StoryManager : MonoBehaviour
     public bool Act3Finished = false;
 
     public bool A3S2Finished = false;
+    public bool A3S2_TalkRad = false;
     public bool A3S2_EnterMap = false;
     public bool A3S2_EnterTem = false;
     public bool A3S2_TemTalk1 = false;
@@ -84,38 +85,47 @@ public class StoryManager : MonoBehaviour
     {
         DisablePlayerMovement();
         ShowText("Scaethys: ... in the Lost Kingdom i \nwould be some kind of Robin Hood.");
+        MoveNPC("npc1");
     }
     public void FA1S1Talk2()
     {
         ShowText("Radath: ... So stealing from \nthe strong and giving the weak?");
+        MoveNPC("npc2");
     }
     public void FA1S1Talk3()
     {
         ShowText("Scaethys: So glad we got the note about \nthe shipment.");
+        MoveNPC("npc1");
     }
     public void FA1S1Talk4()
     {
         ShowText("Scaethys: Tomorrow we will start with \ndoing great deeds .");
+        MoveNPC("npc1");
     }
     public void FA1S1Talk5()
     {
         ShowText("Radath: So everyone knows what to do?");
+        MoveNPC("npc2");
     }
     public void FA1S1Talk6()
     {
         ShowText("Radath: We will just beat the hell \nout of them!");
+        MoveNPC("npc2");
     }
     public void FA1S1Talk7()
     {
         ShowText("Scaethys: And then get the precoius \ntreasures they carry.");
+        MoveNPC("npc1");
     }
     public void FA1S1Talk8()
     {
         ShowText("Radath: So First take care\n of the guards.");
+        MoveNPC("npc2");
     }
     public void FA1S1Talk9()
     {
         ShowText("Scaethys: And then loot the chest.");
+        MoveNPC("npc1");
     }
     public void FA1S1Talk10()
     {
@@ -123,6 +133,7 @@ public class StoryManager : MonoBehaviour
     public void FA1S1Talk11()
     {
         ShowText("Scaethys: Lost Kingdom, here we come!");
+        MoveNPC("npc1");
     }
     public void FA1S1Talk12()
     {
@@ -151,11 +162,13 @@ public class StoryManager : MonoBehaviour
     {
         
         ShowText("Radath: To hit an enemy, \njust press ctrl!");
+        MoveNPC("npc2");
     }
 
     public void FA1S2_TalkSca()
     {
         ShowText("Scaethys: You should try to \nevade their hits!");
+        MoveNPC("npc1");
     }
     public void FA1S2_KilledE()
     {
@@ -180,43 +193,53 @@ public class StoryManager : MonoBehaviour
     {
         DisablePlayerMovement();
         ShowText("Scaethys: Finally we managed\nto get at least one job done!");
+        MoveNPC("npc1");
     }
     public void FA2S1Talk2()
     {
         ShowText("Scaethys: An with the prey\nwe can now live like kings!");
+        MoveNPC("npc1");
     }
     public void FA2S1Talk3()
     {
         ShowText("Radath whispers: \nFor two days? No longer!");
+        MoveNPC("npc2");
     }
     public void FA2S1Talk4()
     {
         ShowText("Scaethys: You, don't grumble.\nWith my plan i got us real food!");
+        MoveNPC("npc1");
     }
     public void FA2S1Talk5()
     {
         ShowText("Radath: Yeah Scaethys, you are right!");
+        MoveNPC("npc2");
     }
     public void FA2S1Talk6()
     {
         ShowText("Scaethys: Tomorrow I will \nkeep ... erm sell this amulett...");
+        MoveNPC("npc1");
     }
     public void FA2S1Talk7()
     {
         ShowText("Scaethys: And you two will \nperformthe next job.");
+        MoveNPC("npc1");
     }
     public void FA2S1Talk8()
     {
         ShowText("Scaethys: I know an old clairvoyant\n in the forest.");
+        MoveNPC("npc1");
     }
     public void FA2S1Talk9()
     {
         ShowText("Radath whispers: No good deeds to \nexpect from you.");
+        MoveNPC("npc2");
     }
     public void FA2S1Talk10()
     {
         EnablePlayerMovement();
         ShowText("Scaethys: Shut up and eat!");
+        MoveNPC("npc1");
         GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().Health = GameProperties.PlayerMaxHealth;
     }
     public void FA2S1Talk11()
@@ -240,6 +263,7 @@ public class StoryManager : MonoBehaviour
     public void FA2S2_RadTalk()
     {
         ShowText("Radath: Ok, lets do this!\nThough Scaethys behavevd strange.");
+        MoveNPC("npc2");
     }
 
     public void FA2S2_FoundHut()
@@ -258,19 +282,23 @@ public class StoryManager : MonoBehaviour
     public void FA2S2_Talk2()
     {
         ShowText("Clairvoyant: Whahahahaha! So i \nexpected you.");
+        MoveNPC("finalboss");
 
     }
     public void FA2S2_Talk3()
     {
         ShowText("Clairvoyant: You are responsible \nfor your actions.");
+        MoveNPC("finalboss");
     }
     public void FA2S2_Talk4()
     {
         ShowText("Clairvoyant: The Amulet you took was a \nsacrifice for the maleficent God Elion.");
+        MoveNPC("finalboss");
     }
     public void FA2S2_Talk5()
     {
         ShowText("Clairvoyant: You must complete \nthe sacrifice to end our misery.");
+        MoveNPC("finalboss");
     }
     public void FA2S2_Talk6()
     {
@@ -279,6 +307,7 @@ public class StoryManager : MonoBehaviour
     public void FA2S2_Talk7()
     {
         ShowText("Clairvoyant: Do a heck of a job! \nEveryone counts on you!");
+        MoveNPC("finalboss");
     }
     public void FA2S2_Talk8()
     {
@@ -295,9 +324,19 @@ public class StoryManager : MonoBehaviour
 
     #endregion A2S2 Scripts
 
+
+    #region A3S2 Temple Scripts
+
     public void FA3S2_EnterMap()
     {
-        ShowText("Radath: Finally We \ntracked down Scaethys.");
+        ShowText("Radath: We \ntracked down Scaethys.");
+        MoveNPC("npc2");
+    }
+
+    public void FA3S2_TalkRad()
+    {
+        ShowText("Radath: For the Lost Kingdom!");
+        MoveNPC("npc2");
     }
 
     public void FA3S2_EnterTem()
@@ -337,9 +376,7 @@ public class StoryManager : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().Health = GameProperties.PlayerMaxHealth;
         ShowText("You open the chest and find \na health potion.");
-        
     }
-
 
     public void FA3S2_KilledSc()
     {
@@ -362,6 +399,7 @@ public class StoryManager : MonoBehaviour
     {
         ChangeValue("A3S2Finished");
     }
+    #endregion A3S2 Temple Scripts
 
     public void FA3S2Finished()
     {
@@ -401,6 +439,8 @@ public class StoryManager : MonoBehaviour
         MessageBackground.enabled = false;
 
         _deadTimer = -1.0f;
+
+        go_jump = new System.Collections.Generic.Dictionary<GameObject, float>();
     }
 
     public void ChangeValue(string str)
@@ -438,6 +478,22 @@ public class StoryManager : MonoBehaviour
                 }
             }
         }
+
+        System.Collections.Generic.Dictionary<GameObject, float> newDict = new System.Collections.Generic.Dictionary<GameObject, float>(); ;
+        foreach (var o in go_jump)
+        {
+            if (o.Value >= -GameProperties.JumpTime)
+            {
+                o.Key.transform.position += OffsetFromTime(o.Value);
+                newDict.Add(o.Key, o.Value - Time.deltaTime);
+            }
+        }
+        go_jump = newDict;
+    }
+
+    private Vector3 OffsetFromTime(float p)
+    {
+        return new Vector3(0, p/8.0f, 0);
     }
 
     public void ShowText(string text)
@@ -477,6 +533,18 @@ public class StoryManager : MonoBehaviour
             return false;
         }
         return _playerCanMove;
+    }
+
+    System.Collections.Generic.Dictionary<GameObject, float> go_jump;
+
+
+    public void MoveNPC(string npcTag)
+    {
+        var o = GameObject.FindGameObjectWithTag(npcTag);
+        if (o)
+        {
+            go_jump.Add(o, GameProperties.JumpTime);
+        }
     }
 
 }
