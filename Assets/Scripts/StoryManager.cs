@@ -413,6 +413,7 @@ public class StoryManager : MonoBehaviour
     }
 
 
+
     [HideInInspector]
     public bool TextMessagePresent;
     GUIText MessageText;
