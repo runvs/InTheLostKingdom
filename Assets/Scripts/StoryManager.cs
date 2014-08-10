@@ -158,9 +158,10 @@ public class StoryManager : MonoBehaviour
     #endregion A1Sc1 ScriptSequence
     public void FA1S1Finished()
     {
-        Debug.Log("Teleporting!!");
-        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(13, 1);
-        Application.LoadLevel("A1Sc2_Road");
+        //Debug.Log("Teleporting!!");
+        //GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(13, 1);
+        //Application.LoadLevel("A1Sc2_Road");
+        StartTeleport("A1Sc2_Road", new Vector3(13, 1));
     }
 
 
@@ -190,9 +191,11 @@ public class StoryManager : MonoBehaviour
     public void FA1S2Finished()
     {
 
-        Debug.Log("Teleporting!!");
-        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(6, 2);
-        Application.LoadLevel("A2Sc1_ThievesCamp");
+        //Debug.Log("Teleporting!!");
+        //GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(6, 2);
+        //Application.LoadLevel("A2Sc1_ThievesCamp");
+
+        StartTeleport("A2Sc1_ThievesCamp", new Vector3(6, 2));
     }
 
     #region A2S1 ScriptSequence
@@ -260,9 +263,11 @@ public class StoryManager : MonoBehaviour
     #endregion A2S1 ScriptSequence
     public void FA2S1Finished()
     {
-        Debug.Log("Teleporting!!");
-        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(-2, -3);
-        Application.LoadLevel("A2Sc2_ForestHut");
+        //Debug.Log("Teleporting!!");
+        //GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(-2, -3);
+        //Application.LoadLevel("A2Sc2_ForestHut");
+
+        StartTeleport("A2Sc2_ForestHut", new Vector3(-2, -3));
     }
 
     #region A2S2 Scripts
@@ -324,9 +329,11 @@ public class StoryManager : MonoBehaviour
     public void FA2S2Fininished()
     {
         EnablePlayerMovement();
-        Debug.Log("Teleporting!!");
-        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(-1, -12);
-        Application.LoadLevel("A3Sc2_TempleShowdown");
+        //Debug.Log("Teleporting!!");
+        //GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(-1, -12);
+        //Application.LoadLevel("A3Sc2_TempleShowdown");
+
+        StartTeleport("A3Sc2_TempleShowdown", new Vector3(-1, -12));
     }
 
     #endregion A2S2 Scripts
@@ -419,6 +426,33 @@ public class StoryManager : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().ResetGame();
     }
 
+
+
+    private string _newMapName;
+    private Vector3 _newPlayerPosition;
+    private float _timetilTeleport;
+    private bool _isInTeleportPreparation;
+    public void StartTeleport(string mapname, Vector3 newPosition)
+    {
+        Debug.Log("Preparing Teleporter");
+        _newMapName = mapname;
+        _newPlayerPosition = newPosition;
+        _timetilTeleport = _teleportTimer;
+        _animator.RunAnimationOnce();
+        _isInTeleportPreparation = true;
+
+    }
+
+    public void performTeleport()
+    {
+        _isInTeleportPreparation = false;
+        Debug.Log("Teleporting after animation.");
+        GameObject.FindGameObjectWithTag("Player").transform.position = _newPlayerPosition;
+        Application.LoadLevel(_newMapName);
+    }
+
+
+    // Use this for initialization
     void Start()
     {
         _playerCanMove = true;
@@ -459,6 +493,17 @@ public class StoryManager : MonoBehaviour
 
     void Update()
     {
+
+        if (_isInTeleportPreparation)
+        {
+            //Debug.Log(_timetilTeleport);
+            _timetilTeleport -= Time.deltaTime;
+            if (_timetilTeleport <= 0)
+            {
+                performTeleport();
+            }
+        }
+
         TextMessagePresent = MessageText.enabled;
         if (_deadTimer > 0)
         {

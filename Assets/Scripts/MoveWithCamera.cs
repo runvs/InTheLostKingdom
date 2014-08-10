@@ -2,15 +2,18 @@
 
 public class MoveWithCamera : MonoBehaviour
 {
-    private GameObject _cameraObject;
+    public GameObject _cameraObject;
 
     void Start()
     {
-        _cameraObject = GameObject.FindGameObjectWithTag("MainCamera");
+        
     }
 
     void Update()
     {
-        this.transform.position = new Vector3(_cameraObject.transform.position.x, _cameraObject.transform.position.y, 0);
+        _cameraObject = GameObject.FindGameObjectWithTag("MainCamera");
+        gameObject.transform.position = new Vector3(_cameraObject.transform.position.x, _cameraObject.transform.position.y, 0);
+        Debug.Log(_cameraObject.transform.position.x);
+        Debug.Log(gameObject.transform.position.x);
     }
 }
