@@ -53506,7 +53506,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: ace4d232db44bf646ac5702516e714f1, type: 2}
       propertyPath: m_TagString
-      value: finalboss
+      value: Enemies
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: ace4d232db44bf646ac5702516e714f1, type: 2}
       propertyPath: _leftSprite
@@ -71013,7 +71013,7 @@ GameObject:
   - 114: {fileID: 1346717065}
   m_Layer: 0
   m_Name: enemy_scaethys
-  m_TagString: finalboss
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

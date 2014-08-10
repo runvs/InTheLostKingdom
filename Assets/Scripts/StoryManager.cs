@@ -200,7 +200,7 @@ public class StoryManager : MonoBehaviour
     }
     public void FA2S1Talk7()
     {
-        ShowText("Scaethys: And you two will do the next job.");
+        ShowText("Scaethys: And you two will \nperformthe next job.");
     }
     public void FA2S1Talk8()
     {
@@ -263,7 +263,7 @@ public class StoryManager : MonoBehaviour
     }
     public void FA2S2_Talk4()
     {
-        ShowText("Clairvoyant: The Amulet you took was \nment sacrifice for the maleficent God Elion.");
+        ShowText("Clairvoyant: The Amulet you took was a \nsacrifice for the maleficent God Elion.");
     }
     public void FA2S2_Talk5()
     {
