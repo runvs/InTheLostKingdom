@@ -105,6 +105,7 @@ public class HealthController : MonoBehaviour
 
         Destroy(GameObject.FindGameObjectWithTag("MainCamera"));
         Destroy(GameObject.FindGameObjectWithTag("bgm"));
+        Destroy(GameObject.FindGameObjectWithTag("StoryManager"));
 
         Application.LoadLevel("Menu");
     }

@@ -1,9 +1,16 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class StoryManager : MonoBehaviour
 {
+    [HideInInspector]
+    public bool TextMessagePresent;
+    GUIText MessageText;
+    GUITexture MessageBackground;
 
     private float _deadTimer;
+    private float _teleportTimer;
+    private SimpleAnimator _animator;
 
     public AudioClip BipSound;
     public AudioClip MagicEffectSound;
@@ -160,7 +167,7 @@ public class StoryManager : MonoBehaviour
     #region A1Sc2 Scripts
     public void FA1S2_TalkRad()
     {
-        
+
         ShowText("Radath: To hit an enemy, \njust press ctrl!");
         MoveNPC("npc2");
     }
@@ -349,7 +356,7 @@ public class StoryManager : MonoBehaviour
             {
                 Destroy(e);
             }
-                // give scaethys more health
+            // give scaethys more health
             else if (e.name.Equals("scaethys"))
             {
                 e.GetComponent<HealthController>().Health = 10;
@@ -412,13 +419,6 @@ public class StoryManager : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().ResetGame();
     }
 
-
-    [HideInInspector]
-    public bool TextMessagePresent;
-    GUIText MessageText;
-    GUITexture MessageBackground;
-
-    // Use this for initialization
     void Start()
     {
         _playerCanMove = true;
@@ -441,13 +441,14 @@ public class StoryManager : MonoBehaviour
         _deadTimer = -1.0f;
 
         go_jump = new System.Collections.Generic.Dictionary<GameObject, float>();
+
+        _animator = this.gameObject.GetComponentInChildren<SimpleAnimator>();
+        _teleportTimer = _animator.Sprites.Length * (_animator.TimePerFrame / 1000);
     }
 
     public void ChangeValue(string str)
     {
-        //Debug.Log("Change Property " + str + " from " + GetType().GetField(str).GetValue(this) + " to True");
         this.GetType().GetField(str).SetValue(this, true);
-        //Debug.Log("Calling Function " + "F" + str);
         this.GetType().GetMethod("F" + str).Invoke(this, null);
     }
 
@@ -456,9 +457,6 @@ public class StoryManager : MonoBehaviour
         return (bool)(this.GetType().GetField(str).GetValue(this));
     }
 
-
-
-    // Update is called once per frame
     void Update()
     {
         TextMessagePresent = MessageText.enabled;
@@ -479,7 +477,7 @@ public class StoryManager : MonoBehaviour
             }
         }
 
-        System.Collections.Generic.Dictionary<GameObject, float> newDict = new System.Collections.Generic.Dictionary<GameObject, float>(); ;
+        Dictionary<GameObject, float> newDict = new Dictionary<GameObject, float>(); ;
         foreach (var o in go_jump)
         {
             if (o.Value >= -GameProperties.JumpTime)
@@ -493,12 +491,11 @@ public class StoryManager : MonoBehaviour
 
     private Vector3 OffsetFromTime(float p)
     {
-        return new Vector3(0, p/8.0f, 0);
+        return new Vector3(0, p / 8.0f, 0);
     }
 
     public void ShowText(string text)
     {
-
         MessageBackground.enabled = true;
 
         MessageText.text = text;
@@ -525,8 +522,7 @@ public class StoryManager : MonoBehaviour
         _playerCanMove = true;
     }
 
-
-    public bool PlayerCanMove ()
+    public bool PlayerCanMove()
     {
         if (TextMessagePresent)
         {
@@ -535,8 +531,7 @@ public class StoryManager : MonoBehaviour
         return _playerCanMove;
     }
 
-    System.Collections.Generic.Dictionary<GameObject, float> go_jump;
-
+    Dictionary<GameObject, float> go_jump;
 
     public void MoveNPC(string npcTag)
     {
