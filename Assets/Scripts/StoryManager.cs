@@ -476,7 +476,8 @@ public class StoryManager : MonoBehaviour
 
         go_jump = new System.Collections.Generic.Dictionary<GameObject, float>();
 
-        _animator = this.gameObject.GetComponentInChildren<SimpleAnimator>();
+        //_animator = this.gameObject.GetComponentInChildren<SimpleAnimator>();
+        _animator = GameObject.FindGameObjectWithTag("DAWTFISTHISNOTWORKING").GetComponent<SimpleAnimator>();
         _teleportTimer = _animator.Sprites.Length * (_animator.TimePerFrame / 1000);
     }
 
@@ -496,7 +497,7 @@ public class StoryManager : MonoBehaviour
 
         if (_isInTeleportPreparation)
         {
-            //Debug.Log(_timetilTeleport);
+            Debug.Log(_timetilTeleport);
             _timetilTeleport -= Time.deltaTime;
             if (_timetilTeleport <= 0)
             {
@@ -525,10 +526,13 @@ public class StoryManager : MonoBehaviour
         Dictionary<GameObject, float> newDict = new Dictionary<GameObject, float>(); ;
         foreach (var o in go_jump)
         {
-            if (o.Value >= -GameProperties.JumpTime)
+            if (o.Key)
             {
-                o.Key.transform.position += OffsetFromTime(o.Value);
-                newDict.Add(o.Key, o.Value - Time.deltaTime);
+                if (o.Value >= -GameProperties.JumpTime)
+                {
+                    o.Key.transform.position += OffsetFromTime(o.Value);
+                    newDict.Add(o.Key, o.Value - Time.deltaTime);
+                }
             }
         }
         go_jump = newDict;
