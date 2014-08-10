@@ -158,9 +158,10 @@ public class StoryManager : MonoBehaviour
     #endregion A1Sc1 ScriptSequence
     public void FA1S1Finished()
     {
-        Debug.Log("Teleporting!!");
-        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(13, 1);
-        Application.LoadLevel("A1Sc2_Road");
+        //Debug.Log("Teleporting!!");
+        //GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(13, 1);
+        //Application.LoadLevel("A1Sc2_Road");
+        StartTeleport("A1Sc2_Road", new Vector3(13, 1));
     }
 
 
@@ -421,10 +422,29 @@ public class StoryManager : MonoBehaviour
 
 
 
-    [HideInInspector]
-    public bool TextMessagePresent;
-    GUIText MessageText;
-    GUITexture MessageBackground;
+    private string _newMapName;
+    private Vector3 _newPlayerPosition;
+    private float _timetilTeleport;
+    private bool _isInTeleportPreparation;
+    public void StartTeleport(string mapname, Vector3 newPosition)
+    {
+        Debug.Log("Preparing Teleporter");
+        _newMapName = mapname;
+        _newPlayerPosition = newPosition;
+        _timetilTeleport = _teleportTimer;
+        _animator.RunAnimationOnce();
+        _isInTeleportPreparation = true;
+
+    }
+
+    public void performTeleport()
+    {
+        _isInTeleportPreparation = false;
+        Debug.Log("Teleporting after animation.");
+        GameObject.FindGameObjectWithTag("Player").transform.position = _newPlayerPosition;
+        Application.LoadLevel(_newMapName);
+    }
+
 
     // Use this for initialization
     void Start()
@@ -467,6 +487,17 @@ public class StoryManager : MonoBehaviour
 
     void Update()
     {
+
+        if (_isInTeleportPreparation)
+        {
+            Debug.Log(_timetilTeleport);
+            _timetilTeleport -= Time.deltaTime;
+            if (_timetilTeleport <= 0)
+            {
+                performTeleport();
+            }
+        }
+
         TextMessagePresent = MessageText.enabled;
         if (_deadTimer > 0)
         {
