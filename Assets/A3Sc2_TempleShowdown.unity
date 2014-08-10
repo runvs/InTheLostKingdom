@@ -35535,6 +35535,26 @@ Prefab:
       propertyPath: m_TagString
       value: finalboss
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: ace4d232db44bf646ac5702516e714f1, type: 2}
+      propertyPath: _leftSprite
+      value: 
+      objectReference: {fileID: 21300008, guid: 929d848ad15eef0459a396fcef37e594,
+        type: 3}
+    - target: {fileID: 11400004, guid: ace4d232db44bf646ac5702516e714f1, type: 2}
+      propertyPath: _rightSprite
+      value: 
+      objectReference: {fileID: 21300006, guid: 929d848ad15eef0459a396fcef37e594,
+        type: 3}
+    - target: {fileID: 11400004, guid: ace4d232db44bf646ac5702516e714f1, type: 2}
+      propertyPath: _upSprite
+      value: 
+      objectReference: {fileID: 21300002, guid: 929d848ad15eef0459a396fcef37e594,
+        type: 3}
+    - target: {fileID: 11400004, guid: ace4d232db44bf646ac5702516e714f1, type: 2}
+      propertyPath: _downSprite
+      value: 
+      objectReference: {fileID: 21300004, guid: 929d848ad15eef0459a396fcef37e594,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ace4d232db44bf646ac5702516e714f1, type: 2}
   m_RootGameObject: {fileID: 1346717064}
@@ -47127,10 +47147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: 0
-  _leftSprite: {fileID: 0}
-  _rightSprite: {fileID: 0}
-  _upSprite: {fileID: 0}
-  _downSprite: {fileID: 0}
+  _leftSprite: {fileID: 21300008, guid: 929d848ad15eef0459a396fcef37e594, type: 3}
+  _rightSprite: {fileID: 21300006, guid: 929d848ad15eef0459a396fcef37e594, type: 3}
+  _upSprite: {fileID: 21300002, guid: 929d848ad15eef0459a396fcef37e594, type: 3}
+  _downSprite: {fileID: 21300004, guid: 929d848ad15eef0459a396fcef37e594, type: 3}
 --- !u!114 &1346717066
 MonoBehaviour:
   m_ObjectHideFlags: 0

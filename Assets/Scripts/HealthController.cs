@@ -18,6 +18,9 @@ public class HealthController : MonoBehaviour
             case "Enemies":
                 Health = GameProperties.EnemyMaxHealth;
                 break;
+            case "finalboss":
+                Health = GameProperties.EnemyMaxHealth;
+                break;
         }
     }
 
