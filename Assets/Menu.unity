@@ -86,7 +86,7 @@ GameObject:
   - 114: {fileID: 168211739}
   m_Layer: 0
   m_Name: BackgroundMusic
-  m_TagString: Untagged
+  m_TagString: bgm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,11 +97,11 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 168211736}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: a318624866d642440a1dd1f566b1a291, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .5
+  m_Volume: .25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -255,6 +255,9 @@ MonoBehaviour:
   A3S2_EnterMap: 0
   A3S2_EnterTem: 0
   A3S2_TemTalk1: 0
+  A3S2_TemTalk2: 0
+  A3S2_Chest1: 0
+  A3S2_Chest2: 0
   A3S2_KilledSc: 0
   A3S2_FinTalk1: 0
   A3S2_FinTalk2: 0

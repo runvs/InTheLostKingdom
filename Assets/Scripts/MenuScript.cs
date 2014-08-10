@@ -21,10 +21,10 @@ public class MenuScript : MonoBehaviour {
     void Start()
     {
 
-        _fadeTime = _fadeTimeTotal;
-        _introMoveTime = _introMoveTimeTotal;
-        _introFadeTime = _introFadeTimeTotal;
-        GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().text = "In the lost Kingdom\n\nA Game by runvs for GBJam 3, August 2014 \nJulian Thunraz Dinges \nAnd Simon Laguna Weis \n\nPress lctrl to start!";
+        _fadeTime                                                                        = _fadeTimeTotal;
+        _introMoveTime                                                                   = _introMoveTimeTotal;
+        _introFadeTime                                                                   = _introFadeTimeTotal;
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().text = "                     In the lost Kingdom\n\n\n\nPress lctrl to start!\n\npress m to mute Music \n\n\n\nA Game by runvs for GBJam 3 \nAugust 2014 \nJulian Thunraz Dinges And\nSimon Laguna Weis";
         GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().color = new Color(1.0f, 1.0f, 1.0f, 0);
     }
 
@@ -70,9 +70,13 @@ public class MenuScript : MonoBehaviour {
             {
                 _fading = true;
                 audio.PlayOneShot(_soundBlip);
+            }
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                Debug.Log("toggle music mute");
+                GameObject.FindGameObjectWithTag("bgm").GetComponent<AudioSource>().enabled = !GameObject.FindGameObjectWithTag("bgm").GetComponent<AudioSource>().enabled;
 
             }
-
             if (_fading)
             {
                 _fadeTime -= Time.deltaTime;

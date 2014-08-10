@@ -75,7 +75,7 @@ public class MovementController : MonoBehaviour
     {
         if (_timeSinceLastWalkDust <= 0)
         {
-            Instantiate(WalkDust, this.transform.position, this.transform.rotation);
+            //Instantiate(WalkDust, this.transform.position, this.transform.rotation);
             _timeSinceLastWalkDust += Random.Range(0.5f, 0.75f);
         }
     }
