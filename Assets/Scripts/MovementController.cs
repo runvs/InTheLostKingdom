@@ -67,6 +67,7 @@ public class MovementController : MonoBehaviour
                 {
                     MoveUp();
                 }
+             
             }
         }
     }
@@ -90,12 +91,15 @@ public class MovementController : MonoBehaviour
             this.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity.normalized * GameProperties.PlayerMaxVelocity;
         }
 
+        
+
         //Debug.Log(this.GetComponent<Rigidbody2D>().velocity);
     }
 
     public void MoveUp()
     {
-        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, _force));
+        //this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, _force));
+        this.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity + new Vector2(0, _force*0.02f);
         this.Direction = Direction.NORTH;
         this.GetComponent<SpriteRenderer>().sprite = _upSprite;
         SpawnWalkDust();
@@ -103,7 +107,8 @@ public class MovementController : MonoBehaviour
 
     public void MoveDown()
     {
-        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -_force));
+        //this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -_force));
+        this.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity + new Vector2(0, -_force*0.02f);
         this.Direction = Direction.SOUTH;
         this.GetComponent<SpriteRenderer>().sprite = _downSprite;
         SpawnWalkDust();
@@ -111,7 +116,8 @@ public class MovementController : MonoBehaviour
 
     public void MoveRight()
     {
-        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(_force, 0));
+        //this.GetComponent<Rigidbody2D>().AddForce(new Vector2(_force, 0));
+        this.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity + new Vector2(_force * 0.02f, 0);
         this.Direction = Direction.EAST;
         this.GetComponent<SpriteRenderer>().sprite = _rightSprite;
         SpawnWalkDust();
@@ -120,7 +126,8 @@ public class MovementController : MonoBehaviour
 
     public void MoveLeft()
     {
-        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(-_force, 0));
+        //this.GetComponent<Rigidbody2D>().AddForce(new Vector2(-_force, 0));
+        this.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity + new Vector2(-_force * 0.02f, 0);
         this.Direction = Direction.WEST;
         this.GetComponent<SpriteRenderer>().sprite = _leftSprite;
         SpawnWalkDust();
