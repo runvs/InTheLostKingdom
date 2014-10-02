@@ -17,7 +17,7 @@ public class PlayerAttackingScript : MonoBehaviour
     void Update()
     {
         // check if there is a message present
-        if (!GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StoryManager>().TextMessagePresent) 
+        if (GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StoryManager>().PlayerCanMove()) 
         {
             if (Input.GetButton("Fire1"))
             {

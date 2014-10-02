@@ -137,11 +137,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5690b5b084dc16b47b8bdb0b976f29e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Direction: 0
-  _leftSprite: {fileID: 0}
-  _rightSprite: {fileID: 0}
-  _upSprite: {fileID: 0}
-  _downSprite: {fileID: 0}
+  Direction: 1
+  _leftSprite: {fileID: 21300008, guid: 929d848ad15eef0459a396fcef37e594, type: 3}
+  _rightSprite: {fileID: 21300006, guid: 929d848ad15eef0459a396fcef37e594, type: 3}
+  _upSprite: {fileID: 21300002, guid: 929d848ad15eef0459a396fcef37e594, type: 3}
+  _downSprite: {fileID: 21300004, guid: 929d848ad15eef0459a396fcef37e594, type: 3}
+  WalkDust: {fileID: 0}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class MenuScript : MonoBehaviour {
+public class MenuScript : MonoBehaviour
+{
 
     float _fadeTimeTotal = 1.0f;
     float _fadeTime;
@@ -17,6 +17,8 @@ public class MenuScript : MonoBehaviour {
 
     public AudioClip _soundBlip;
 
+    private GameObject _logo;
+
     // Use this for initialization
     void Start()
     {
@@ -24,34 +26,43 @@ public class MenuScript : MonoBehaviour {
         _fadeTime = _fadeTimeTotal;
         _introMoveTime = _introMoveTimeTotal;
         _introFadeTime = _introFadeTimeTotal;
-        GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().text = "In the lost Kingdom\n\nA Game by runvs for GBJam 3, August 2014 \nJulian Thunraz Dinges \nAnd Simon Laguna Weis \n\nPress lctrl to start!";
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().text = "                     In the lost Kingdom\n\n\n\nPress lctrl to start!\n\npress m to mute Music \n\n\n\nA Game by runvs for GBJam 3 \nAugust 2014 \nJulian Thunraz Dinges And\nSimon Laguna Weis";
         GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().color = new Color(1.0f, 1.0f, 1.0f, 0);
+
+        // Find logo
+        var hudObjects = GameObject.FindGameObjectsWithTag("Hud");
+        foreach (var hudObject in hudObjects)
+        {
+            if (hudObject.name == "runvs_logo")
+            {
+                _logo = hudObject;
+                break;
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         float camHalfHeight = Camera.main.orthographicSize;
-        GameObject logo = GameObject.FindGameObjectWithTag("Hud");
 
-        
         if (_introMoveTime >= 0 || _introFadeTime >= 0)
         {
             if (_introMoveTime >= 0)
             {
                 _introMoveTime -= Time.deltaTime;
 
-                float yval =  2.5f * (camHalfHeight * (1.0f - (float)(PennerDoubleEquation.GetValue(PennerDoubleEquation.EquationType.Linear, _introMoveTimeTotal - _introMoveTime, 0.0f, 1.0f, _introMoveTimeTotal))));
-                logo.transform.position = new Vector3(0, yval, 0);
+                float yval = 2.5f * (camHalfHeight * (1.0f - (float)(PennerDoubleEquation.GetValue(PennerDoubleEquation.EquationType.Linear, _introMoveTimeTotal - _introMoveTime, 0.0f, 1.0f, _introMoveTimeTotal))));
+                _logo.transform.position = new Vector3(0, yval, 0);
             }
             else
             {
                 if (_introFadeTime >= 0)
                 {
                     _introFadeTime -= Time.deltaTime;
-                    logo.transform.position = new Vector3(0, 0, 0);
+                    _logo.transform.position = new Vector3(0, 0, 0);
                     float alphaval = (1.0f - (float)(PennerDoubleEquation.GetValue(PennerDoubleEquation.EquationType.Linear, _introFadeTimeTotal - _introFadeTime, 0.0f, 1.0f, _introFadeTimeTotal)));
-                    logo.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, alphaval);
+                    _logo.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, alphaval);
                 }
 
             }
@@ -60,7 +71,7 @@ public class MenuScript : MonoBehaviour {
         {
             if (_introFadeTime >= -_introFadeTimeTotal)
             {
-                logo.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0);
+                _logo.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0);
 
                 _introFadeTime -= Time.deltaTime;
                 float alphaval = ((float)(PennerDoubleEquation.GetValue(PennerDoubleEquation.EquationType.Linear, -_introFadeTime, 0.0f, 1.0f, _introFadeTimeTotal)));
@@ -70,9 +81,13 @@ public class MenuScript : MonoBehaviour {
             {
                 _fading = true;
                 audio.PlayOneShot(_soundBlip);
+            }
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                Debug.Log("toggle music mute");
+                GameObject.FindGameObjectWithTag("bgm").GetComponent<AudioSource>().enabled = !GameObject.FindGameObjectWithTag("bgm").GetComponent<AudioSource>().enabled;
 
             }
-
             if (_fading)
             {
                 _fadeTime -= Time.deltaTime;
@@ -85,9 +100,9 @@ public class MenuScript : MonoBehaviour {
                 {
                     col = new Color(1.0f, 1.0f, 1.0f, 0);
                     GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().color = col;
-                    Application.LoadLevel("TestMap");
-                    Instantiate(PlayerTemplate, new Vector3(-3, 1, 0), new Quaternion());
-                    
+                    Application.LoadLevel("A1Sc1_ThievesCamp");
+                    Instantiate(PlayerTemplate, new Vector3(6, 4, 0), new Quaternion());
+
 
                 }
                 GameObject.FindGameObjectWithTag("GameController").GetComponent<GUIText>().color = col;

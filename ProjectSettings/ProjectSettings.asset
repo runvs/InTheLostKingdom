@@ -14,8 +14,8 @@ PlayerSettings:
   productName: inthelostkingdom_
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  defaultScreenWidth: 160
-  defaultScreenHeight: 144
+  defaultScreenWidth: 320
+  defaultScreenHeight: 288
   defaultScreenWidthWeb: 320
   defaultScreenHeightWeb: 288
   m_RenderingPath: 1

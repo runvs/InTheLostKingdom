@@ -215,7 +215,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: a5de771ef7a40ca40a2f9e624d09c87a, type: 2}
       propertyPath: TargetLevelName
-      value: A2Sc2_ForestHut
+      value: A3Sc2_TempleShowdown
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: a5de771ef7a40ca40a2f9e624d09c87a, type: 2}
       propertyPath: m_Name
@@ -223,11 +223,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: a5de771ef7a40ca40a2f9e624d09c87a, type: 2}
       propertyPath: TargetPosition.x
-      value: -2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: a5de771ef7a40ca40a2f9e624d09c87a, type: 2}
       propertyPath: TargetPosition.y
-      value: -3
+      value: -12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5de771ef7a40ca40a2f9e624d09c87a, type: 2}
@@ -4541,8 +4541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ffe4eecd8c77f844bac26818f7cfb62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetLevelName: A2Sc2_ForestHut
-  TargetPosition: {x: -2, y: -3}
+  TargetLevelName: A3Sc2_TempleShowdown
+  TargetPosition: {x: 2, y: -12}
 --- !u!61 &1362027874
 BoxCollider2D:
   m_ObjectHideFlags: 0

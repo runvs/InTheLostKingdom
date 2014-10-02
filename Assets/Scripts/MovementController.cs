@@ -15,8 +15,14 @@ public class MovementController : MonoBehaviour
     public Sprite _upSprite;
     public Sprite _downSprite;
 
+    public GameObject WalkDust;
+
+    private float _timeSinceLastWalkDust;
+
+
     void Start()
     {
+        _timeSinceLastWalkDust = 0.0f;
         if (this.tag == "Player")
         {
             _force = GameProperties.PlayerMoveForce;
@@ -38,13 +44,15 @@ public class MovementController : MonoBehaviour
 
     void Update()
     {
+        _timeSinceLastWalkDust -= Time.deltaTime;
         if (this.tag == "Player")
         {
-            if (!GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StoryManager>().TextMessagePresent)
+            if (GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StoryManager>().PlayerCanMove())
             {
                 if (Input.GetAxis("Horizontal") > 0)
                 {
                     MoveRight();
+                    
                 }
                 else if (Input.GetAxis("Horizontal") < 0)
                 {
@@ -59,7 +67,17 @@ public class MovementController : MonoBehaviour
                 {
                     MoveUp();
                 }
+             
             }
+        }
+    }
+
+    private void SpawnWalkDust()
+    {
+        if (_timeSinceLastWalkDust <= 0)
+        {
+            //Instantiate(WalkDust, this.transform.position, this.transform.rotation);
+            _timeSinceLastWalkDust += Random.Range(0.5f, 0.75f);
         }
     }
 
@@ -73,34 +91,45 @@ public class MovementController : MonoBehaviour
             this.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity.normalized * GameProperties.PlayerMaxVelocity;
         }
 
+        
+
         //Debug.Log(this.GetComponent<Rigidbody2D>().velocity);
     }
 
     public void MoveUp()
     {
-        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, _force));
+        //this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, _force));
+        this.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity + new Vector2(0, _force*0.02f);
         this.Direction = Direction.NORTH;
         this.GetComponent<SpriteRenderer>().sprite = _upSprite;
+        SpawnWalkDust();
     }
 
     public void MoveDown()
     {
-        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -_force));
+        //this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -_force));
+        this.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity + new Vector2(0, -_force*0.02f);
         this.Direction = Direction.SOUTH;
         this.GetComponent<SpriteRenderer>().sprite = _downSprite;
+        SpawnWalkDust();
     }
 
     public void MoveRight()
     {
-        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(_force, 0));
+        //this.GetComponent<Rigidbody2D>().AddForce(new Vector2(_force, 0));
+        this.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity + new Vector2(_force * 0.02f, 0);
         this.Direction = Direction.EAST;
         this.GetComponent<SpriteRenderer>().sprite = _rightSprite;
+        SpawnWalkDust();
     }
+
 
     public void MoveLeft()
     {
-        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(-_force, 0));
+        //this.GetComponent<Rigidbody2D>().AddForce(new Vector2(-_force, 0));
+        this.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity + new Vector2(-_force * 0.02f, 0);
         this.Direction = Direction.WEST;
         this.GetComponent<SpriteRenderer>().sprite = _leftSprite;
+        SpawnWalkDust();
     }
 }

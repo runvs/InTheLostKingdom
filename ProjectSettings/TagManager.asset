@@ -18,6 +18,10 @@ TagManager:
   - StoryManager
   - StoryElements
   - finalboss
+  - bgm
+  - npc2
+  - npc1
+  - DAWTFISTHISNOTWORKING
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
